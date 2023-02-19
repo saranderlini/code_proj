@@ -5,14 +5,25 @@ html {
     -o-background-size: cover;
     background-size: cover;
 
+    /* This is the main setup, mobile-first (max 480px)*/
     .header {
         background: url(../../img/header-500.svg);
         background-size: cover;
         height: 100vh;
+        background-repeat: no-repeat;
         .header__title {
-            position: relative;
-            text-shadow: 0.2rem 0.2rem 1rem rgba(221, 221, 225, 0.679);
-            top: 40vh;
+            display: inline-block;
+            .header__title__child {
+                position: relative;
+                text-shadow: 0.2rem 0.2rem 1rem rgba(221, 221, 225, 0.679);
+                top: 30vh;
+                h1 {
+                    line-height: 3.5rem;
+                }
+                h2 {
+                    margin-top: 0.7rem;
+                }
+            }
             .header__pic-small {
                 position: absolute;
                 bottom: -2vh;
@@ -21,6 +32,57 @@ html {
                 z-index: 900;
                 width: 100px;
 
+            }
+        }
+    }
+
+    /* Devices between 481px and 768px */
+    @media only screen and (min-width: 481px) and (max-width: 769px) {
+        .header {
+            background: url(../../img/header-770.svg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            .header__title {
+                .header__title__child {
+                    left: 10vw;
+                    h1 {
+                        font-size: 40px;
+                    }
+                }
+            }
+        }
+    }
+    /* Devices between 769px and 1024px */
+    @media only screen and (min-width: 770px) and (max-width: 1024px) {
+        .header {
+            background: url(../../img/header-1024.svg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            .header__title {
+                .header__title__child {
+                    top: 40vh;
+                    left: 15vw;
+                    h1 {
+                        font-size: 55px;
+                    }
+                }
+            }
+        } 
+    }
+    /* marger screens, at least 1025px */
+    @media only screen and (min-width: 1025px) {
+        .header {
+            background: url(../../img/header-1200.svg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            .header__title {
+                .header__title__child {
+                    top: 40vh;
+                    left: 18vw;
+                    h1 {
+                        font-size: 60px;
+                    }
+                }
             }
         }
     }

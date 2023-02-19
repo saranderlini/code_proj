@@ -1,25 +1,75 @@
-.article {
-    .section {
-        background-color: $green;
+body {
+    /* This is the main setup, mobile-first (max 480px)*/
+    .article {
+        /* Who I am */
+        .section {
+            background-color: $green;
+        }
+        /* My vision */
+        .section-right {
+            background-color: $blue;
+            text-align: right;
+            .section__par {
+                padding-bottom: 1rem;
+            }
+        }
+        /* The text section, common to both paragraphs*/
         .section__par {
             line-height: 1.5rem;
         }
-    }
 
-    .section-right {
-        background-color: $blue;
-        text-align: right;
-        .section__par {
-            line-height: 1.5rem;
-            padding-bottom: 1rem;
+        .breaker {
+            width: 100%;
+            height: 2rem;
+            background-color: $nav-bar-color;
+            border: $nav-bar-color;
         }
-
     }
 
-    .breaker {
-        width: 100%;
-        height: 2rem;
-        background-color: $nav-bar-color;
-        border: $nav-bar-color;
+    /* Devices between 481px and 768px */
+    .article {
+        .section {
+            padding-left: 7vw;
+            .section__par {
+                width: 85%;
+            }
+        }
+        .section-right {
+            padding-right: 7vw;
+            .section__par {
+                margin-left: 10vw;
+            }
+        }
+    }
+
+    /* Devices between 769px and 1024px */
+    .article {
+        .section {
+            padding-left: 12vw;
+            .section__par {
+                width: 80%;
+            }
+        }
+        .section-right {
+            padding-right: 12vw;
+            .section__par {
+                margin-left: 17vw;
+            }
+        }
+    }
+        /* Devices minimum 1025px */
+    .article {
+        .section {
+            padding-left: 12vw;
+            .section__par {
+                width: 80%;
+            }
+        }
+        .section-right {
+            padding-right: 12vw;
+            .section__par {
+                margin-left: 17vw;
+            }
+        }
     }
 }
