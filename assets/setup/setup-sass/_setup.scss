@@ -94,3 +94,24 @@ a {
         font-size: $base-font-size;
     }
 }
+
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+    $base-font-size: 18px;
+    body {
+        font-size: $base-font-size;
+    }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+    $base-font-size: 20px;
+    body {
+        font-size: $base-font-size;
+    }
+}
+
+@media only screen and (min-width: 1025px) {
+    $base-font-size: 22px;
+    body {
+        font-size: $base-font-size;
+    }
+}

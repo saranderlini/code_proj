@@ -14,7 +14,8 @@
         position: absolute;
         width: 100%;
         h2 {
-            font-size: 14px;
+            font-size: 0.875rem;
+            font-size: clamp(0.875rem, 0.7211538461538461rem + 0.7692307692307693vw, 1.875rem);
         }
     }
 }

@@ -14,14 +14,20 @@ html {
         .header__title {
             display: inline-block;
             .header__title__child {
+                color: $header-color;
                 position: relative;
                 text-shadow: 0.2rem 0.2rem 1rem rgba(221, 221, 225, 0.679);
                 top: 30vh;
                 h1 {
-                    line-height: 3.5rem;
+                    line-height: 6rem;
+                    font-size: 3.125rem;
+                    font-size: clamp(3.125rem, 2.1634615384615383rem + 4.807692307692308vw, 9.375rem);
+                    letter-spacing: 0.1rem;
                 }
                 h2 {
                     margin-top: 0.7rem;
+                    font-size: 1.875rem;
+                    font-size: clamp(1.875rem, 1.298076923076923rem + 2.8846153846153846vw, 5.625rem);
                 }
             }
             .header__pic-small {
@@ -31,7 +37,6 @@ html {
                 transform: rotate(347deg);
                 z-index: 900;
                 width: 100px;
-
             }
         }
     }
@@ -45,9 +50,6 @@ html {
             .header__title {
                 .header__title__child {
                     left: 10vw;
-                    h1 {
-                        font-size: 40px;
-                    }
                 }
             }
         }
@@ -62,9 +64,6 @@ html {
                 .header__title__child {
                     top: 40vh;
                     left: 15vw;
-                    h1 {
-                        font-size: 55px;
-                    }
                 }
             }
         } 
@@ -77,11 +76,8 @@ html {
             background-repeat: no-repeat;
             .header__title {
                 .header__title__child {
-                    top: 40vh;
+                    top: 30vh;
                     left: 18vw;
-                    h1 {
-                        font-size: 60px;
-                    }
                 }
             }
         }
