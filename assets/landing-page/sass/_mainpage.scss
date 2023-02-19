@@ -1,0 +1,25 @@
+.article {
+    .section {
+        background-color: $green;
+        .section__par {
+            line-height: 1.5rem;
+        }
+    }
+
+    .section-right {
+        background-color: $blue;
+        text-align: right;
+        .section__par {
+            line-height: 1.5rem;
+            padding-bottom: 1rem;
+        }
+
+    }
+
+    .breaker {
+        width: 100%;
+        height: 2rem;
+        background-color: $nav-bar-color;
+        border: $nav-bar-color;
+    }
+}

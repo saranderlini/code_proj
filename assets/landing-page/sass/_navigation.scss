@@ -1,0 +1,20 @@
+/* Navigation configuration for landing page */
+.nav {
+    position: relative;
+    width: 100%;
+    outline: none;
+    .nav__list {
+        display: flex;
+        justify-content: space-around;
+
+        background-color: transparent;
+        bottom: 0;
+        list-style-type: none;
+        padding: 0.6rem;
+        position: absolute;
+        width: 100%;
+        h2 {
+            font-size: 14px;
+        }
+    }
+}

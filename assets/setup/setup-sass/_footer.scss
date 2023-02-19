@@ -1,0 +1,24 @@
+body {
+    position: relative;
+    .footer {
+        align-items: center;
+        bottom: 0.3rem;
+        display: inline-flex;
+        justify-content: space-between;
+        position: absolute;
+        width: 100%;
+        .footer__to-top-page {
+            .material-symbols-rounded {
+                border: 2px solid $black-hover;
+                border-radius: 25px;
+                padding: 1.5px;
+            }
+        }
+        .footer__right {
+            right: 5vw;
+            a {
+                margin-right: 1rem;
+            }
+        }
+    }
+}

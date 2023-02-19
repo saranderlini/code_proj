@@ -1,0 +1,27 @@
+html {
+    background: $light-blue-white;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+    .header {
+        background: url(../../img/header-500.svg);
+        background-size: cover;
+        height: 100vh;
+        .header__title {
+            position: relative;
+            text-shadow: 0.2rem 0.2rem 1rem rgba(221, 221, 225, 0.679);
+            top: 40vh;
+            .header__pic-small {
+                position: absolute;
+                bottom: -2vh;
+                right: 18vw;
+                transform: rotate(347deg);
+                z-index: 900;
+                width: 100px;
+
+            }
+        }
+    }
+}
