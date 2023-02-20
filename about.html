@@ -3,8 +3,9 @@
     <head>
         <meta charset="utf-8">
         <title>Sara Anderlini - Personal Website</title>
-        <link rel="stylesheet" href="assets/landing-page/css/style.css">
+        <link rel="stylesheet" href="assets/about-page/css/style.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Symbols+Rounded">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Symbols+Outlined">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="icon" type="image/x-icon" href="/assets/img/circle-sara.png">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,26 +13,66 @@
 
     <body id="top">
         <header class="block__header">
-            <nav class="nav">
-                <ul class="nav__list">
+            <nav class="block__nav py-1">
+                <ul class="block__nav__list">
                     <li class="first">
-                        <h2 class="nav__linkname">About Me</h2>
+                        <h2 class="block__nav__linkname">About Me</h2>
                     </li>
 
                     <li class="second">
                         <a href="">
-                        <h2 class="nav__linkname">Portfolio</h2>
+                        <h2 class="block__nav__linkname">Portfolio</h2>
                         </a>
                     </li>
 
                     <li class="third">
                         <a href="">
-                        <h2 class="nav__linkname">Contact Me</h2>
+                        <h2 class="block__nav__linkname">Contact</h2>
                         </a>
                     </li>
                 </ul>
             </nav>
+            <h1 class="about__header__title">About Me</h1>
         </header>
-        
+        <main class="about--main">
+            <section class="block__section">
+                <h2 class="block__section__title">
+                    <span class="material-symbols-outlined">
+                        insights
+                        </span>
+                    Background
+                </h2>
+                <p class="block__section__par">
+                    <h3 class="block__section__par__subtitle">What am I like on paper?</h3>
+                    <div class="block__section__par__div">I graduated from Università di Bologna with a Master in International Affairs, where I concentrated my studies on security issues and crisis management operations. Over the last few years, I have worked in both for-profit and non-profit sectors, and in the international development realm, in Italy and abroad.
+                    </div>
+                </p>
+                <p class="block__section__par">
+                    <h3 class="block__section__par__subtitle">What does any of that have to do with web development?</h3>
+                    <div class="block__section__par__div">
+                    International and Humanitarian Affairs is a persistent passion, and Web Development is the tool I'm building to turn passion into practice.
+                    </div>
+                </p>
+                <p class="block__section__par">
+                    <h3 class="block__section__par__subtitle">What is it like to work with me?</h3>
+                    <div class="block__section__par__div">
+                    I am a friendly, extraverted, and socially-fueled young professional with excellent interpersonal, listening and collaboration skills.   This means that I am also passionate collaborator, in person or at a distance, with a people-centered and service-oriented approach.
+                    </div>
+                </p>
+            </section>
+        </main>
+        <footer class="footer">
+            <a class="footer__to-top-page px-1" href="#top">
+                <span class="material-symbols-rounded">arrow_upward</span>
+            </a>
+            <div class="footer__right">
+                <a href="https://www.instagram.com/saranderlini/?hl=it">
+                    <i class="fa fa-instagram fa-lg" aria-hidden="true"></i>
+                </a>
+                <a href="https://it-it.facebook.com/sara.anderlini">
+                    <i class="fa fa-facebook-square fa-lg" aria-hidden="true"></i>
+                </a>
+            </div>
+        </footer> 
     </body>
 </html>

@@ -1,0 +1,39 @@
+html {
+    background: $light-blue-white;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+    /* This is the main setup, mobile-first (max 480px)*/
+    .block__header {
+        @include smallest-header;
+        .about__header__title {
+            @include header-h1;
+            position: relative;
+            left: 8vw;
+            top: 30vh;
+        }
+    }
+
+    /* Devices between 481px and 768px */
+    @media only screen and (min-width: 481px) and (max-width: 769px) {
+        .block__header {
+            @include small-header;
+        }
+    }
+
+    /* Devices between 769px and 1024px */
+    @media only screen and (min-width: 770px) and (max-width: 1024px) {
+        .block__header {
+            @include medium-header;
+        }
+    }
+
+    /* marger screens, at least 1025px */
+    @media only screen and (min-width: 1025px) {
+        .block__header {
+            @include large-header;
+        }
+    }
+}

@@ -1,0 +1,27 @@
+body {
+    .block__nav {
+        position: fixed;
+        width: 100%;
+        .block__nav__list {
+            display: flex;
+            flex-basis: 100%;
+            list-style: none;
+            justify-content: space-around;
+            .block__nav__linkname {
+                @include nav-items;
+            }
+        }
+    }
+}
+
+@media (hover:hover) {
+    .block__nav {
+        .block__nav__list {
+            a:hover {
+                .block__nav__linkname {
+                    @include nav-items-hover;
+                }
+            }
+        }
+    }
+}

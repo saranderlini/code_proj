@@ -1,0 +1,56 @@
+@mixin smallest-header {
+    background: url(../../img/header-500.svg);
+    background-size: cover;
+    height: 100vh;
+    background-repeat: no-repeat;
+}
+
+@mixin small-header {
+    background: url(../../img/header-770.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+@mixin medium-header {
+    background: url(../../img/header-1024.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+@mixin large-header {
+    background: url(../../img/header-1200.svg);
+    background-size: cover;
+    background-repeat: no-repeat;    
+}
+
+@mixin header-h1 {
+    display: inline;
+    line-height: 6rem;
+    font-size: 3.125rem;
+    font-size: clamp(3.125rem, 2.1634615384615383rem + 4.807692307692308vw, 9.375rem);
+    letter-spacing: 0.1rem;
+}
+
+@mixin header-h2 {
+    margin-top: 0.7rem;
+    font-size: 1.875rem;
+    font-size: clamp(1.875rem, 1.298076923076923rem + 2.8846153846153846vw, 5.625rem);
+}
+
+@mixin nav-items {
+    color: $header-color;
+    font-size: 0.875rem;
+    font-size: clamp(0.875rem, 0.7211538461538461rem + 0.7692307692307693vw, 1.875rem);
+    padding: 0.7vh 0.7vw;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 2px solid $header-color;
+    border-radius: 25px;
+}
+
+@mixin nav-items-hover {
+    border-color: $link-hover;
+    color: $link-hover;
+    transform: scale(1.1);    
+}
+

@@ -7,6 +7,8 @@ Extra large screens, TV – 1201px, and more. */
 @import "global";
 @import "setup";
 @import "footer";
+@import "mixin";
+@import "navigation";
 
 * {
     box-sizing: border-box;
