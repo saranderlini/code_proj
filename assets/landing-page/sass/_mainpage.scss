@@ -1,6 +1,6 @@
 body {
     /* This is the main setup, mobile-first (max 480px)*/
-    .article {
+    .main {
         /* Who I am */
         .section {
             background-color: $light-blue;
@@ -28,7 +28,7 @@ body {
     }
 
     /* Devices between 481px and 768px */
-    .article {
+    .main {
         .section {
             padding-left: 7vw;
             .section__par {
@@ -46,7 +46,7 @@ body {
     }
 
     /* Devices between 769px and 1024px */
-    .article {
+    .main {
         .section {
             padding-left: 12vw;
             .section__par {
@@ -63,7 +63,7 @@ body {
         }
     }
         /* Devices minimum 1025px */
-    .article {
+    .main {
         .section {
             padding-left: 12vw;
             .section__par {
