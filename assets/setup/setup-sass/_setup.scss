@@ -48,13 +48,21 @@ $space-amounts: (1,2,3,4,5);
     font-family: "aileron";
     src: url(/assets/font/aileron/Aileron-Light.otf) format(otf);
     font-weight: 300;
+    font-style: normal;
 }
 
-/* bold font */
+/* strong font */
 @font-face {
     font-family: "aileron";
     src: url(../../font/aileron/Aileron-Bold.otf) format(otf);
     font-weight: bold;
+}
+
+/* italic body font */
+@font-face {
+    font-family: "aileron";
+    src: url(../../font/aileron/Aileron-LightItalic.otf) format(otf);
+    font-style: italic;
 }
 
 
@@ -83,6 +91,7 @@ h3, h4, h5, h6 {
 body {
     font-family: "aileron";
     font-weight: 300;
+    font-style: normal;
 
     color: $text-color;
 }
@@ -90,6 +99,11 @@ body {
 strong {
     font-family: "aileron";
     font-weight: bold;
+}
+
+em {
+    font-family: "aileron";
+    font-style: italic;
 }
 
 a {
