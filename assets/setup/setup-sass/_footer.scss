@@ -20,20 +20,38 @@ body {
                 margin-right: 1rem;
             }
         }
-        @media only screen and (min-width: 769px) and (max-width: 1024px) {
-            a {
-                span {
+    }
+    @media only screen and (min-width: 769px) and (max-width: 1024px) {
+        .footer {
+            position: absolute;
+            bottom: 1rem;
+            .footer__to-top-page {
+                margin-left: 2rem;
+                .material-symbols-rounded {
                     font-size: 28px;
                 }
             }
+            .footer__right {
+                margin-right: 2rem;
+            }
         }
+    }
     
-        @media only screen and (min-width: 1025px) {
-            a {
-                span {
+    @media only screen and (min-width: 1025px) {
+        .footer {
+            position: absolute;
+            bottom: 1.3rem;
+            .footer__to-top-page {
+                margin-left: 2.2rem;
+                .material-symbols-rounded {
                     font-size: 30px;
                 }
+            }
+            .footer__right {
+                margin-right: 2.2rem;
             }
         }
     }
 }
+
+    

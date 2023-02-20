@@ -13,9 +13,32 @@
         padding: 0.6rem;
         position: absolute;
         width: 100%;
-        h2 {
-            font-size: 0.875rem;
-            font-size: clamp(0.875rem, 0.7211538461538461rem + 0.7692307692307693vw, 1.875rem);
+        a {
+            h2 {
+                font-size: 0.875rem;
+                font-size: clamp(0.875rem, 0.7211538461538461rem + 0.7692307692307693vw, 1.875rem);
+                padding: 0.7vh 0.7vw;
+                backdrop-filter: blur(10px);
+                -webkit-backdrop-filter: blur(10px);
+                border: 2px solid $text-color;
+                border-radius: 25px;
+            }
+        }
+
+    }
+}
+@media (hover: hover) {
+    .nav {                
+        .nav__list {
+            .first, .second, .third {
+                a:hover {
+                    .nav__linkname {
+                        color: $link-hover;
+                        transform: scale(1.1);
+                    }
+                }
+            }
+
         }
     }
 }

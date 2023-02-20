@@ -3,19 +3,20 @@ body {
     .article {
         /* Who I am */
         .section {
-            background-color: $green;
+            background-color: $light-blue;
         }
         /* My vision */
         .section-right {
-            background-color: $blue;
+            background-color: $light-blue;
             text-align: right;
             .section__par {
-                padding-bottom: 1rem;
+                padding-bottom: 2rem;
             }
         }
         /* The text section, common to both paragraphs*/
         .section__par {
             line-height: 1.5rem;
+            padding-bottom: 1.5rem;
         }
 
         .breaker {
