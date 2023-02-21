@@ -13,6 +13,9 @@ main {
         }
         .block__section__par {
             background-color: $blue;
+            div {
+                color: $text-white;
+            }
         }
     }
 }
