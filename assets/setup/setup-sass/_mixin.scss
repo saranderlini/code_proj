@@ -1,5 +1,8 @@
 @mixin smallest-header {
     background: url(../../img/header-500.svg);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-size: cover;
     height: 100vh;
     background-repeat: no-repeat;
@@ -7,18 +10,27 @@
 
 @mixin small-header {
     background: url(../../img/header-770.svg);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-size: cover;
     background-repeat: no-repeat;
 }
 
 @mixin medium-header {
     background: url(../../img/header-1024.svg);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-size: cover;
     background-repeat: no-repeat;
 }
 
 @mixin large-header {
     background: url(../../img/header-1200.svg);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-size: cover;
     background-repeat: no-repeat;    
 }
@@ -52,4 +64,22 @@
     border-color: $link-hover;
     color: $link-hover;
     transform: scale(1.1);    
+}
+
+@mixin small-button {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 3px solid $text-color;
+    background-color: $text-white;
+}
+
+@mixin small-square {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: $text-white;
 }
