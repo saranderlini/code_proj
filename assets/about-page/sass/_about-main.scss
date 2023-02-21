@@ -1,4 +1,4 @@
-main {
+/*main {
     .block__section {
         width: 100%;
         padding: 2rem;
@@ -13,7 +13,36 @@ main {
         }
         .block__section__par {
             background-color: $blue;
-            div {
+            .block__section__par__subtitle {
+                color: $blue !important;
+            }
+        }
+    }
+}*/
+
+.block--main {
+    .block__section {
+        width: 100%;
+        padding: 2rem;
+        background-color: $blue;
+        .block__section__title {
+            display: flex;
+            margin: 1rem;
+            font-size: xx-large;
+            .material-symbols-outlined {
+                padding-right: 1rem;
+                font-size: 30px;
+            }
+        }
+        .block__section__par {
+            background-color: lighten($blue, 2);
+            padding: 0.5rem 0;
+            border-radius: 5px;
+            box-shadow: 0 0 5px;
+            .block__section__par__subtitle {
+                color: pink;
+            }
+            .block__section__par__child {
                 color: $text-white;
             }
         }

@@ -53,12 +53,3 @@
     color: $link-hover;
     transform: scale(1.1);    
 }
-
-@function set-color($color) {
-    @if (lightness($color) > 40) {
-        @return $text-black;
-    }
-    @else {
-        @return $text-white;
-    }
-}
