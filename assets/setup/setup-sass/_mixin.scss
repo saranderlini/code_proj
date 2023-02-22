@@ -83,3 +83,20 @@
     height: 10px;
     background-color: $text-white;
 }
+
+@mixin horizontal-ruler {
+    content: "";
+    position: absolute;
+    display: flex;
+    width: 89vw;
+    border: none;
+    border-top: 2px solid $text-color;
+}
+
+@mixin arrow {
+    content: "";
+    position: absolute;
+    border: none;
+    border-left: 3px dashed black;
+    height: 35px;
+}
