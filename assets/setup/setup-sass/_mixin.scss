@@ -74,6 +74,7 @@
     border-radius: 50%;
     border: 3px solid $text-color;
     background-color: $text-white;
+    z-index: 10;
 }
 
 @mixin small-square {
@@ -90,13 +91,12 @@
     display: flex;
     width: 89vw;
     border: none;
-    border-top: 2px solid $text-color;
+    border-top: 3px solid $text-color;
 }
 
-@mixin arrow {
-    content: "";
-    position: absolute;
-    border: none;
-    border-left: 3px dashed black;
-    height: 35px;
+@mixin wide-timeline-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 400px;    
 }

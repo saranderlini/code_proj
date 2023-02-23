@@ -25,21 +25,23 @@
             }
             
             /* this changes accoring to the viewport*/
-            .par__ruler {
+            .par__ruler, .par__ruler__work {
                 padding: 1rem 0 0.5rem 1rem;
                 border: none;
                 border-left: 3px solid $black-hover;
-                .par__ruler__desc {
+                .par__ruler__desc, .par__work__column {
                     width: 90%;
-                    .par__ruler__desc__card {
+                    .par__ruler__desc__card, .par__work__card, .par__work__card-rule {
                         margin-top: 0.4rem;
                         dt {
                             font-weight: bold;
                             position: relative;
-                            &::before {
-                                @include small-button;
-                                top: 50%;
-                                left: calc(-1rem - 10px);
+                            @media only screen and (max-width: 480px) {
+                                &::before {
+                                    @include small-button;
+                                    top: 50%;
+                                    left: calc(-1rem - 10px);
+                                }                                
                             }
                         }
                         dd {
@@ -51,9 +53,9 @@
         }
         @media only screen and (min-width: 481px) and (max-width: 1024px) {
             .block__section__par {
-                .par__ruler {
+                .par__ruler, .par__ruler__work {
                     border: none;
-                    .par__ruler__desc {
+                    .par__ruler__desc, .par__work__column {
                         display: flex;
                         flex-direction: row-reverse;
                         justify-content: space-around;
@@ -82,7 +84,7 @@
                                 border-radius: 25px;   
                             }    
                         }
-                        .par__ruler__desc__card {
+                        .par__ruler__desc__card, .par__work__card-rule, .par__work__card {
                             padding: 0.5rem;
                             flex-basis: 40%;
                             dt {
@@ -104,47 +106,104 @@
         @media only screen and (min-width: 1025px) {
             .block__section__par {
                 width: 90%;
-                .par__ruler {
+                .par__ruler, .par__ruler__work {
                     display: flex;
                     flex-direction: row-reverse;
-                    justify-content: space-between;
+                    justify-content: space-around;
                     border: none;
+                    width: 100%;
 
                     .par__ruler__desc {
-                        display: flex;
-                        flex-direction: column;
-                        justify-content: space-between;
-                        width: 400px;
+                        @include wide-timeline-column;
                         /* section to the right of the screen, chronologically the most recent one */
                         &:first-of-type {
                             justify-content: space-around;
                             padding-top: 1rem;
+                            position: relative;
+                            &::before {
+                                @include small-button;
+                                bottom: 52.2%;
+                                left: 10%;
+                            }
+                            &::after {
+                                @include small-button;
+                                top: 44.5%;
+                                right: 30%;
+                            }
+                            /* setting the text of the upper cards to the right */
+                            .par__ruler__desc__card:first-child {
+                                text-align: right;
+                                padding-top: 3rem;
+                                padding-right: 2rem;
+                            }
                         }
-                        /* section to the left of the screen, chronologically the oldest one */
+                        /*  EDUCATION section to the left of the screen, chronologically the oldest one */
                         &:last-of-type {
+                            position: relative;
+                            width: 450px;
+                            &::before {
+                                @include small-button;
+                                bottom: 52.2%;
+                                left: 10%;
+                            }
+                            &::after {
+                                @include small-button;
+                                top: 44.5%;
+                                right: 30%;
+                            }
                             .par__ruler__desc__card {
                                 padding: 0.5rem;
                                 &:last-of-type {
                                     position: relative;
-                                    &:last-of-type {
-                                        &::before {
-                                            @include horizontal-ruler;
-                                            top: -1rem;
-                                            left: -2vw;
-                                        }
+                                    &::before {
+                                        @include horizontal-ruler;
+                                        top: -1.5rem;
+                                        left: -5vw;
                                     }
                                 }
-                                &::after {
-                                    position: relative;
-                                    @include arrow;
+                                /* EDUCATION setting the text of the upper cards to the right */
+                                &:first-child {
+                                    text-align: right;
+                                    padding-bottom: 2rem;
+                                    padding-left: 2rem;
                                 }
                             }
                         }
-
+                    }
+                    .par__work__column {
+                        width: 450px;
+                        position: relative;
+                        .par__work__card, .par__work__card-rule {
+                            padding: 1rem 0.5rem;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: space-between;
+                            &:first-child {
+                                text-align: right;
+                            }
+                        }
+                        .par__work__card-rule {
+                            position: relative;
+                            &::before {
+                                @include horizontal-ruler;
+                                top: -0.7rem;
+                                left: -2rem;
+                            }
+                        }
+                        /* adding the small dot */
+                        &::before {
+                            @include small-button;
+                            top: 38.5%;
+                            left: 7%;
+                        }
+                        &::after {
+                            @include small-button;
+                            bottom: 56.5%;
+                            right: 13%;
+                        }
                     }
                 }
             }
         }
-
     }
 }
