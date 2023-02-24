@@ -4,7 +4,7 @@
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    height: 100vh;
+    height: 50vh;
     background-repeat: no-repeat;
 }
 
@@ -89,7 +89,7 @@
     content: "";
     position: absolute;
     display: flex;
-    width: 89vw;
+    width: 79vw;
     border: none;
     border-top: 3px solid $text-color;
 }
@@ -99,4 +99,16 @@
     flex-direction: column;
     justify-content: space-between;
     width: 400px;    
+}
+
+@mixin li-skill-bar {
+    content: "";
+    position: absolute;
+    width: 20vw;
+    border: none;
+    border-top: 5px solid;
+    border-radius: 20px;
+    z-index: 12;
+    top: -0.3rem;
+    color: $bar-fill;
 }
