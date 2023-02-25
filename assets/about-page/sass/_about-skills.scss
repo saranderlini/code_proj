@@ -1,95 +1,9 @@
 /* about-main was getting too long */
 .block__section {
+    &:last-of-type {
+        padding-bottom: 4vh;
+    }
     .block__section__par {
-        /* styling the language bars */
-        details {
-            margin: auto;
-            summary {
-                display: flex;
-                font-weight: bold;
-
-            }
-            /*summary::-webkit-display-marker {
-                display: none;
-            }*/
-            ul {
-                list-style: none;
-                width: 100%;
-                li {
-                    padding: 0.5rem;
-                    position: relative;
-                    display: flex;
-                    align-items: center;
-                    justify-content: space-between;
-                    .li-bar {
-                        width: 50vw;
-                        border: none;
-                        border-top: 5px solid $text-color;
-                        border-radius: 25px;
-                        position: relative;
-                        &::before {
-                            @include li-skill-bar;
-                            left: 0;
-                            color: $bar-fill;
-                        }
-                    }
-                    .ita {
-                        &::before {
-                            width: 100%;
-                        }
-                    }
-                    .eng {
-                        &::before {
-                            width: 95%;
-                        }
-                    }
-                    .spanish {
-                        &::before {
-                            width: 45%;
-                        }
-                    }
-                    .french {
-                        &::before {
-                            width: 20%;
-                        }
-                    }
-                    .tooltip {
-                        position: relative;
-                        .tooltiptext {
-                            display: none;
-                            position: absolute;
-                        }
-                        @media(hover:hover) {
-                            &:hover {
-                                .tooltiptext {
-                                    display: inline-block;
-                                    background-color: transparentize($text-color, 0.25);
-                                    border: 1px solid none;
-                                    border-radius: 5px;
-                                    color: $text-white;
-                                    bottom: 0.7rem;
-                                    font-size: 13px;
-                                    left: 50%;
-                                    padding: 0.2rem;
-                                    /* inserting the arrow in the bubblespeech */ 
-                                    &::after {
-                                        content: "";
-                                        position: absolute;
-                                        top: 100%;
-                                        left: 50%;
-                                        margin-left: -5px;
-                                        border-width: 5px;
-                                        border-style: solid;
-                                        border-color:transparentize($text-color, 0.25)
-                                        transparent transparent transparent;
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
         .skill__par {
             display: flex;
             flex-wrap: wrap;
@@ -97,18 +11,21 @@
             justify-content: space-evenly;
             
             .skill__par__card {
-                width: 55vw;
+                width: 60vw;
                 border: 3px solid $text-white;
                 border-radius: 20px;
                 background-color: $text-white;
                 padding: 1rem 0;
                 margin: 1rem;
-                details {
+                details {   
                     summary {
-                        h4 {
+                        cursor: pointer;
+                        list-style: none;
+                        h3 {
                             display: flex;
                             flex-direction: column;
-                            align-items: center;                            margin: auto;
+                            align-items: center;margin: auto;
+                            font-weight: bold;
                             span {
                                 font-size: 6rem;
                                 color: darken($bar-fill, 0.4);
@@ -118,9 +35,92 @@
                     }
                     &[open] {
                         .skill__par__card__text {
-                            padding: 1rem 1rem;
+                            padding: 1.2rem 1rem 1rem;
                             line-height: 1.8rem;
                         }
+                        ul {
+                            padding: 1.2rem 1rem 1rem;
+                            list-style: none;
+                            width: 100%;
+                            li {
+                                padding: 0.5rem;
+                                position: relative;
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
+                                justify-content: space-between;
+                                h4 {
+                                    margin-bottom: 0.5rem;
+                                }
+                                .li-bar {
+                                    width: 50vw;
+                                    border: none;
+                                    border-top: 5px solid $text-color;
+                                    border-radius: 25px;
+                                    position: relative;
+                                    &::before {
+                                        @include li-skill-bar;
+                                        left: 0;
+                                        color: $bar-fill;
+                                    }
+                                }
+                                .ita {
+                                    &::before {
+                                        width: 100%;
+                                    }
+                                }
+                                .eng {
+                                    &::before {
+                                        width: 95%;
+                                    }
+                                }
+                                .spanish {
+                                    &::before {
+                                        width: 45%;
+                                    }
+                                }
+                                .french {
+                                    &::before {
+                                        width: 20%;
+                                    }
+                                }
+                                .tooltip {
+                                    position: relative;
+                                    .tooltiptext {
+                                        display: none;
+                                        position: absolute;
+                                    }
+                                    @media(hover:hover) {
+                                        &:hover {
+                                            .tooltiptext {
+                                                display: inline-block;
+                                                background-color: transparentize($text-color, 0.25);
+                                                border: 1px solid none;
+                                                border-radius: 5px;
+                                                color: $text-white;
+                                                bottom: 0.7rem;
+                                                font-size: 13px;
+                                                left: 50%;
+                                                padding: 0.2rem;
+                                                /* inserting the arrow in the bubblespeech */ 
+                                                &::after {
+                                                    content: "";
+                                                    position: absolute;
+                                                    top: 100%;
+                                                    left: 50%;
+                                                    margin-left: -5px;
+                                                    border-width: 5px;
+                                                    border-style: solid;
+                                                    border-color:transparentize($text-color, 0.25)
+                                                    transparent transparent transparent;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+            
                     }
                 }
             }
