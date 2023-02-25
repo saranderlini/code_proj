@@ -6,12 +6,16 @@
     .block__section__par {
         .skill__par {
             display: flex;
+            flex-direction: column;
             flex-wrap: wrap;
             -ms-flex-wrap: wrap;
             justify-content: space-evenly;
+            align-items: center;
             
             .skill__par__card {
-                width: 60vw;
+                width: fit-content;
+                min-width: 180px;
+                max-width: 80vw;
                 border: 3px solid $text-white;
                 border-radius: 20px;
                 background-color: $text-white;
@@ -100,7 +104,7 @@
                                                 color: $text-white;
                                                 bottom: 0.7rem;
                                                 font-size: 13px;
-                                                left: 50%;
+                                                left: 70%;
                                                 padding: 0.2rem;
                                                 /* inserting the arrow in the bubblespeech */ 
                                                 &::after {
@@ -109,7 +113,7 @@
                                                     top: 100%;
                                                     left: 50%;
                                                     margin-left: -5px;
-                                                    border-width: 5px;
+                                                    border-width: 4px;
                                                     border-style: solid;
                                                     border-color:transparentize($text-color, 0.25)
                                                     transparent transparent transparent;
@@ -123,6 +127,60 @@
             
                     }
                 }
+            }
+        }
+    }
+    @media only screen and (min-width: 481px) and (max-width: 768px) {
+        .block__section__par {
+            .skill__par {
+                .skill__par-wrap {
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: nowrap;
+                    align-items: center;
+                    justify-content: space-evenly;
+                    .skill__par__card {
+                        width: fit-content;
+                        max-width: 40vw;
+                        height: min-content;
+                    }
+                }
+            }
+        }
+    }
+    @media only screen and (min-width: 769px) {
+        .block__section__par {
+            .skill__par {
+                align-items: center;
+                flex-wrap: nowrap;
+                flex-direction: row;
+                justify-content: space-around;
+                .skill__par-wrap {
+                    align-items: center;
+                    display: flex;
+                    flex-basis: 66%;
+                    flex-direction: row;
+                    flex-wrap: nowrap;
+                    justify-content: space-around;
+                    
+                }
+                .skill__par__card {
+                    width: fit-content;
+                    max-width: 40vw;
+                    height: min-content;
+                    &:first-of-type {
+                        details[open] {
+                            ul {
+                                li {
+                                    .li-bar {
+                                        width: 20vw;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
             }
         }
     }

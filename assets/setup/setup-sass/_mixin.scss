@@ -111,3 +111,15 @@
     top: -0.3rem;
     color: $bar-fill;
 }
+
+@mixin li-skill-bar-shorter {
+    content: "";
+    position: absolute;
+    width: 5vw;
+    border: none;
+    border-top: 5px solid;
+    border-radius: 20px;
+    z-index: 12;
+    top: -0.3rem;
+    color: $bar-fill;
+}
