@@ -8,6 +8,7 @@ html {
     /* This is the main setup, mobile-first (max 480px)*/
     .block__header {
         @include smallest-header;
+        height: 60vh;
         .about__header__title {
             @include header-h1;
             position: relative;

@@ -8,6 +8,7 @@ html {
     /* This is the main setup, mobile-first (max 480px)*/
     .header {
         @include smallest-header;
+        height: 100vh;
         .header__title {
             display: inline-block;
             .header__title__child {
