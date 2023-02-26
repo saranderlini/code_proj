@@ -141,7 +141,7 @@
                 .skill__par-wrap {
                     display: flex;
                     flex-direction: row;
-                    flex-wrap: nowrap;
+                    flex-wrap: wrap;
                     align-items: center;
                     justify-content: space-evenly;
                     .skill__par__card {
