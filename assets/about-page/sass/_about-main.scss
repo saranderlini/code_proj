@@ -1,32 +1,5 @@
 .block--main {
-    background-color: $blue-grey;
     .block__section {
-        width: 85%;
-        margin: auto;
-        background-color: $blue-grey;
-        .block__section__title {
-            display: inline-flex;
-            padding: 1rem;
-            margin: 3rem 1rem 0;
-            font-size: xx-large;
-            span {
-                padding-right: 1rem;
-                font-size: 2.5rem;
-            }
-        }
-
-        .block__section__par {
-            padding: 0.5rem 0 2rem;
-            margin: auto;
-            .block__section__par__subtitle {
-                padding-bottom: 1rem;
-                color: $header-color;
-            }
-            .block__section__par__child {
-                color: darken($text-color, 10);
-                padding-bottom: 1rem;
-            }
-            
             /* this changes accoring to the viewport*/
             .par__ruler, .par__ruler__work {
                 padding: 1rem 0 0.5rem 1rem;
@@ -36,6 +9,7 @@
                     width: 90%;
                     .par__ruler__desc__card, .par__work__card, .par__work__card-rule {
                         margin-top: 0.4rem;
+                        line-height: 1.5rem;
                         dt {
                             font-weight: bold;
                             position: relative;
@@ -54,7 +28,9 @@
                 }
             }
         }
-        @media only screen and (min-width: 481px) and (max-width: 1024px) {
+    
+    @media only screen and (min-width: 481px) and (max-width: 1124px) {
+        .block__section {
             .block__section__par {
                 .par__ruler, .par__ruler__work {
                     border: none;
@@ -90,6 +66,8 @@
                         .par__ruler__desc__card, .par__work__card-rule, .par__work__card {
                             padding: 0.5rem;
                             flex-basis: 40%;
+                            line-height: 1.5rem;
+
                             dt {
                                 position: relative;
                                 &::before {
@@ -100,87 +78,100 @@
                             }
                         }
                     }
-
+    
                 }
             }
         }
+    }
 
-        /* larger screens */
-        @media only screen and (min-width: 1025px) {
+    /* larger screens */
+    @media only screen and (min-width: 1125px) {
+        .block__section {
             .block__section__par {
-                width: 90%;
                 .par__ruler, .par__ruler__work {
                     display: flex;
                     flex-direction: row-reverse;
                     justify-content: space-around;
                     border: none;
                     width: 100%;
-
+    
                     .par__ruler__desc {
                         @include wide-timeline-column;
                         /* section to the right of the screen, chronologically the most recent one */
                         &:first-of-type {
-                            justify-content: space-around;
+                            justify-content: space-between;
                             padding-top: 1rem;
+                            padding-left: 20px;
                             position: relative;
                             &::before {
                                 @include small-button;
-                                bottom: 52.2%;
+                                bottom: 51.5%;
                                 left: 10%;
                             }
                             &::after {
                                 @include small-button;
-                                top: 44.5%;
+                                top: 45.95%;
                                 right: 30%;
                             }
                             /* setting the text of the upper cards to the right */
                             .par__ruler__desc__card:first-child {
                                 text-align: right;
-                                padding-top: 3rem;
+                                padding-bottom: 20px;
                                 padding-right: 2rem;
+                                line-height: 1.8rem;
+                                padding-top: 3rem;
+                            }
+                            .par__ruler__desc__card:last-child {
+                                padding-top: 20px;
+                                line-height: 1.8rem;
                             }
                         }
                         /*  EDUCATION section to the left of the screen, chronologically the oldest one */
                         &:last-of-type {
                             position: relative;
-                            width: 450px;
+                            right: 10px;
                             &::before {
                                 @include small-button;
-                                bottom: 52.2%;
+                                bottom: 51.5%;
                                 left: 10%;
                             }
                             &::after {
                                 @include small-button;
-                                top: 44.5%;
+                                top: 45.95%;
                                 right: 30%;
                             }
                             .par__ruler__desc__card {
-                                padding: 0.5rem;
+                                padding: 0.5rem;    
+                                line-height: 1.8rem;
                                 &:last-of-type {
                                     position: relative;
+                                    padding-top: 20px;
+                                    line-height: 1.8rem;
                                     &::before {
                                         @include horizontal-ruler;
-                                        top: -1.5rem;
-                                        left: -2rem;
+                                        top: -10px;
+                                        left: -35px;
                                     }
                                 }
                                 /* EDUCATION setting the text of the upper cards to the right */
                                 &:first-child {
                                     text-align: right;
-                                    padding-bottom: 2rem;
+                                    padding-bottom: 20px;
                                     padding-left: 2rem;
                                 }
                             }
                         }
                     }
                     .par__work__column {
-                        width: 450px;
+                        min-width: 450px;
+                        max-width: 510px;
                         position: relative;
                         .par__work__card, .par__work__card-rule {
                             padding: 1rem 0.5rem;
                             display: flex;
                             flex-direction: column;
                             justify-content: space-between;
+                            line-height: 1.6rem;
                             &:first-child {
                                 text-align: right;
                             }
@@ -189,9 +180,9 @@
                             position: relative;
                             &::before {
                                 @include horizontal-ruler;
-                                width: 82vw;
+                                width: 70vw;
                                 top: -0.7rem;
-                                left: -2rem;
+                                left: -30px;
                             }
                         }
                         /* adding the small dot */
@@ -206,6 +197,12 @@
                             right: 13%;
                         }
                     }
+                }
+            }
+            /* making the text inside the first section narrower*/ 
+            &:first-of-type {
+                .block__section__par {
+                    width: 65%;
                 }
             }
         }

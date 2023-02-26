@@ -11,6 +11,11 @@
             -ms-flex-wrap: wrap;
             justify-content: space-evenly;
             align-items: center;
+            .skill__par-wrap {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
             
             .skill__par__card {
                 width: fit-content;

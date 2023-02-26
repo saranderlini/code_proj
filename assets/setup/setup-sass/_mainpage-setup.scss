@@ -1,0 +1,67 @@
+.block--main {
+    .block__section {
+        width: 100%;
+        margin: auto;
+        .block__section__title {
+            display: inline-flex;
+            padding: 1rem 0;
+            margin: 3vw auto 1vw 10vw;
+            font-size: 2rem;
+            span {
+                padding-right: 1rem;
+                font-size: 4vh;
+            }
+        }
+
+        .block__section__par {
+            padding: 0 2rem 0.5rem;
+            margin: auto;
+            .block__section__par__subtitle {
+                color: $header-color;
+            }
+            .block__section__par__child {
+                color: darken($text-color, 10);
+                padding-bottom: 1rem;
+            }
+        }
+    }
+    @media only screen and (min-width: 481px) and (max-width: 1124px) {
+        .block__section {
+            .block__section__title {
+                font-size: 3rem;
+                margin-left: 10%;
+                span {
+                    font-size: 5vh;
+                }
+            }
+
+            .block__section__par {
+                padding: 0.5rem 4rem;
+            }
+        }
+    }
+
+    /* larger screens */
+    @media only screen and (min-width: 1125px) {
+        .block__section {
+            .block__section__title {
+                font-size: 3rem;
+                margin-left: 20%;
+                span {
+                    font-size: 4rem;
+                }
+            }
+            .block__section__par {
+                width: 70%;
+                margin: auto;    
+                padding: 0 0.5rem 1rem;
+                /* making the text inside the first section narrower*/ 
+                &:first-of-type {
+                    .block__section__par {
+                        width: 65%;
+                    }
+                }
+            }
+        }
+    }
+}    
