@@ -48,7 +48,7 @@ $space-amounts: (1,2,3,4,5);
     font-family: "aileron";
     src: url(/assets/font/aileron/Aileron-Light.otf) format(otf);
     font-weight: 300;
-    font-style: normal;
+    font-style: light;
 }
 
 /* strong font */
@@ -64,18 +64,37 @@ $space-amounts: (1,2,3,4,5);
     src: url(../../font/aileron/Aileron-LightItalic.otf) format(otf);
     font-style: italic;
 }
+/* font fallback, when aileron doesn't load */
+/* barlow for h3-h6 */
+@font-face {
+    font-family: "barlow"; 
+    src: url(../../font/barlow_condensed/BarlowCondensed-Medium.ttf) format(ttf);
+    font-weight: 500;
+}
+/* barlow for h1 */
+@font-face {
+    font-family: "barlow";
+    src: url(../../font/barlow_condensed/BarlowCondensed-Black.ttf);
+    font-weight: 900;
+}
+/* barlow for h2 */
+@font-face {
+    font-family: "barlow";
+    src: url(../../font/barlow_condensed/BarlowCondensed-Bold.ttf) format(ttf);
+    font-weight: 700;
+}
 
 /* Applying fonts to headings and text styles */
 
 h1 {
-    font-family: "aileron";
+    font-family: "aileron", "barlow";
     font-weight: 900;
 
     color: $header-color;
 }
 
 h2 {
-    font-family: "aileron";
+    font-family: "aileron", "barlow";
     font-weight: 700;
 
     color: $header-color;
@@ -83,8 +102,9 @@ h2 {
 }
 
 h3, h4, h5, h6 {
-    font-family: "aileron";
+    font-family: "aileron", "barlow";
     font-weight: normal;
+    font-weight: 500;
 
     color: $header-color;
 }
@@ -92,16 +112,16 @@ h3, h4, h5, h6 {
 body {
     font-family: "aileron", sans-serif;
     font-weight: 300;
-    font-style: normal;
+    font-style: light;
 }
 
 strong {
-    font-family: "aileron";
+    font-family: "aileron", sans-serif;
     font-weight: bold;
 }
 
 em {
-    font-family: "aileron";
+    font-family: "aileron", sans-serif;
     font-style: italic;
 }
 
@@ -132,15 +152,20 @@ hr {
 
 @media only screen and (max-width: 480px) {
     $base-font-size: 16px;
-    body {
-        font-size: $base-font-size;
-        line-height: 2rem;
-        .block--main {
-            background-image: url(../../img/header-500.svg);
-            background-size: cover;
-            background-repeat: repeat;
-            .block__section {
-                background-color: $small-bg-color;
+    html {
+        background-image: url(../../img/header-500.svg);
+        background-size: contain;
+        -webkit-background-size: contain;
+        -moz-background-size: contain;
+        -o-background-size: contain;
+        body {
+            font-size: $base-font-size;
+            line-height: 2rem;
+            .block--main {
+                background-color: transparent;
+                .block__section {
+                    background-color: $small-bg-color;
+                }
             }
         }
     }
@@ -148,15 +173,20 @@ hr {
 
 @media only screen and (min-width: 481px) and (max-width: 768px) {
     $base-font-size: 18px;
-    body {
-        font-size: $base-font-size;
-        line-height: 2.2rem;
-        .block--main {
-            background-image: url(../../img/header-770.svg);
-            background-size: cover;
-            background-repeat: repeat;
-            .block__section {
-                background-color: $medium-bg-color;
+    html {
+        background-image: url(../../img/header-770.svg);
+        -webkit-background-size: contain;
+        -moz-background-size: contain;
+        -o-background-size: contain;
+        background-size: contain;
+        body {
+            font-size: $base-font-size;
+            line-height: 2.2rem;
+            .block--main {
+                background-color: transparent;
+                .block__section {
+                    background-color: $medium-bg-color;
+                }
             }
         }
     }
@@ -164,15 +194,20 @@ hr {
 
 @media only screen and (min-width: 769px) and (max-width: 1024px) {
     $base-font-size: 20px;
-    body {
-        font-size: $base-font-size;
-        line-height: 2.5rem;
-        .block--main {
-            background-image: url(../../img/header-1024.svg);
-            background-size: cover;
-            background-repeat: repeat;
-            .block__section {
-                background-color: $medium-bg-color;
+    html {
+        background-image: url(../../img/header-1024.svg);
+        -webkit-background-size: contain;
+        -moz-background-size: contain;
+        -o-background-size: contain;
+        background-size: contain;
+        body {
+            font-size: $base-font-size;
+            line-height: 2.5rem;
+            .block--main {
+                background-color: transparent;
+                .block__section {
+                    background-color: $medium-bg-color;
+                }
             }
         }
     }
@@ -180,14 +215,20 @@ hr {
 
 @media only screen and (min-width: 1025px) {
     $base-font-size: 22px;
-    body {
-        font-size: $base-font-size;
-        line-height: 3rem;
-        .block--main {
-            background-image: url(../../img/header-1200.svg);    background-size: cover;
-            background-repeat: repeat;
-            .block__section {
-                background-color: $big-bg-color;
+    html {
+        background-color: transparent;
+        body {
+            font-size: $base-font-size;
+            line-height: 3rem;
+            .block--main {
+                background-image: url(../../img/header-1200.svg);
+                -webkit-background-size: cover;
+                -moz-background-size: cover;
+                -o-background-size: cover;
+                background-size: cover;
+                .block__section {
+                    background-color: $big-bg-color;
+                }
             }
         }
     }

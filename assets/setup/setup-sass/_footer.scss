@@ -1,12 +1,14 @@
 body {
     position: relative;
     .footer {
+        background-color: transparent;
+        background-size: cover;
         align-items: center;
         bottom: 0.3rem;
         display: inline-flex;
         justify-content: space-between;
         position: absolute;
-        width: 100%;
+        width: min-content;
         .footer__to-top-page {
             .material-symbols-rounded {
                 color: $header-color;
@@ -15,18 +17,10 @@ body {
                 padding: 1.5px;
             }
         }
-        .footer__right {
-            right: 5vw;
-            a {
-                margin-right: 1rem;
-                i {
-                    color: $header-color;
-                }
-            }
-        }
     }
     @media only screen and (min-width: 769px) and (max-width: 1024px) {
         .footer {
+            background-color: transparent;
             position: absolute;
             bottom: 1rem;
             .footer__to-top-page {
@@ -35,7 +29,7 @@ body {
                     font-size: 28px;
                 }
             }
-            .footer__right {
+            .block-nav__right {
                 margin-right: 2rem;
                 i {
                     font-size: 28px;
@@ -46,6 +40,7 @@ body {
     
     @media only screen and (min-width: 1025px) {
         .footer {
+            background-color: transparent;
             position: absolute;
             bottom: 1.3rem;
             .footer__to-top-page {
@@ -54,10 +49,12 @@ body {
                     font-size: 30px;
                 }
             }
-            .footer__right {
+            .block-nav__right {
+                a {
                 margin-right: 2.2rem;
-                i {
-                    font-size: 30px;
+                    i {
+                        font-size: 30px;
+                    }
                 }
             }
         }
@@ -72,7 +69,7 @@ body {
                 border-color: $link-hover;
             }
         }
-        .footer__right {
+        .block-nav__right {
             a:hover {
                 i {
                     color: $link-hover;

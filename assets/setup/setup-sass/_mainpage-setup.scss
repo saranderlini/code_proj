@@ -45,6 +45,7 @@ body {
         /* larger screens */
         @media only screen and (min-width: 1025px) {
             .block__section {
+                margin-bottom: 3rem;
                 .block__section__title {
                     font-size: 3rem;
                     margin-left: 20%;
@@ -54,7 +55,7 @@ body {
                 }
                 .block__section__par {
                     width: 70%;
-                    margin: auto;    
+                    margin: 0 auto;    
                     padding: 0 0.5rem 1rem;
                     /* making the text inside the first section narrower*/ 
                     &:first-of-type {

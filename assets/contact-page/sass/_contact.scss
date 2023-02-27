@@ -1,0 +1,101 @@
+html {
+    body {
+        .block--main {
+            .block__section {
+                .block__section__par {
+                    margin-bottom: 3rem;
+                    .contact--list {
+                        list-style-type: none;
+                        .contact--list--block {
+                            .contact--list--data {
+                                color: darken($text-color, 0.4);
+                                display: flex;
+                                align-self: center;
+                                line-height: 0.5;
+                                padding: 0.5rem 0;
+                                address {
+                                    align-self: center;
+                                    font-style: normal;
+                                    font-weight: 400;
+                                    line-height: 20px;
+                                    padding-left: 1rem;
+                                }
+                            }
+                            .contact--list--social {
+                                display: flex;
+                                justify-content: space-between;
+                                width: 60%;
+                                margin: auto;
+                                a {
+                                    font-size: 22px;
+                                    padding: 0.5rem 1rem;
+                                }
+                            }    
+                        }
+                    }
+                }
+                @media only screen and (min-width: 481px) and (max-width: 1024px) {
+                    .block__section__par {
+                        .contact--list {
+                            display: flex;
+                            justify-content: space-around;
+                            .contact--list--block {
+                                /* section to the left, with phone, mail and city*/
+                                &:first-of-type {
+                                    display: flex;
+                                    flex-direction: column;
+                                    justify-content: space-evenly;
+                                    align-items: flex-start;
+                                }
+                                /* social links */
+                                &:last-of-type {
+                                    display: flex;
+                                    .contact--list--social {
+                                        flex-direction: column;
+                                        a {
+                                            font-size: 30px;
+                                        }
+                                    }               
+                                }
+                            }
+                        }
+                    }
+                }
+                @media only screen and (min-width: 1025px) {
+                    .block__section__par {
+                        .contact--list {
+                            display: flex;
+                            justify-content: space-between;
+                            .contact--list--block {
+                                /* section to the left, with phone, mail and city*/
+                                &:first-of-type {
+                                    display: flex;
+                                    flex-direction: column;
+                                    justify-content: space-evenly;
+                                    align-items: flex-start;
+                                    .contact--list--data {
+                                        margin-bottom: 1rem;
+                                    }
+                                }
+                                /* social links */
+                                &:last-of-type {
+                                    display: flex;
+                                    flex-basis: 40%;
+                                    justify-content: space-evenly;
+                                    .contact--list--social {
+                                        flex-direction: row;
+                                        align-items: center;
+                                        flex-basis: 100%;
+                                        a {
+                                            font-size: 40px;
+                                        }
+                                    }               
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

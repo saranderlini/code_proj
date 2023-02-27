@@ -1,10 +1,4 @@
 html {
-    background: $light-blue;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-
     /* This is the main setup, mobile-first (max 480px)*/
     .block__header {
         @include smallest-header;
