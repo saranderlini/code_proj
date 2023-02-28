@@ -1,5 +1,5 @@
 @mixin smallest-header {
-    background: url(../../img/header-500.svg);
+    background: url(../../img/triangle-light-500.svg);
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -8,7 +8,7 @@
 }
 
 @mixin small-header {
-    background: url(../../img/header-770.svg);
+    background: url(../../img/triangle-light-768.svg);
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -49,14 +49,9 @@
 }
 
 @mixin nav-items {
-    color: $header-color;
+    color: $h-color-dark;
     font-size: 0.875rem;
     font-size: clamp(0.875rem, 0.7211538461538461rem + 0.7692307692307693vw, 1.875rem);
-    padding: 0.7vh 0.7vw;
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border: 2px solid $header-color;
-    border-radius: 25px;
 }
 
 @mixin nav-items-hover {

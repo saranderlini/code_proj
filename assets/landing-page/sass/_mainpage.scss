@@ -3,72 +3,86 @@ body {
     .main {
         /* Who I am */
         .section {
-            background-color: $light-blue;
+            background-color: $azure-white;
+            color: $text-color;
         }
         /* My vision */
         .section-right {
-            background-color: $light-blue;
+            background-color: $dark-grey;
+            color: $azure-white;
             text-align: right;
+            .section__title, .section__subtitle {
+                color: $azure-white;
+            }
             .section__par {
                 padding-bottom: 2rem;
             }
         }
         /* The text section, common to both paragraphs*/
         .section__par {
-            line-height: 1.5rem;
+            line-height: 2rem;
             padding-bottom: 1.5rem;
         }
     }
 
     /* Devices between 481px and 768px */
-    .main {
-        .section {
-            padding-left: 7vw;
-            .section__par {
-                width: 85%;
-                line-height: 1.8rem;   
+    @media only screen and (min-width: 481px) and (max-width: 768px) {
+        .main {
+            .section {
+                padding-left: 7vw;
+                .section__par {
+                    width: 85%;
+                    line-height: 1.8rem;   
+                }
             }
-        }
-        .section-right {
-            padding-right: 7vw;
-            .section__par {
-                margin-left: 10vw;
-                line-height: 1.8rem;
+            .section-right {
+                padding-right: 7vw;
+                text-align: right;
+                .section__par {
+                    margin-left: 10vw;
+                    line-height: 1.8rem;
+                }
             }
         }
     }
 
     /* Devices between 769px and 1024px */
-    .main {
-        .section {
-            padding-left: 12vw;
-            .section__par {
-                width: 80%;
-                line-height: 2rem;   
+    @media only screen and (min-width: 769px) and (max-width: 1024px) {
+        .main {
+            .section {
+                padding-left: 12vw;
+                .section__par {
+                    width: 80%;
+                    line-height: 2rem;   
+                }
             }
-        }
-        .section-right {
-            padding-right: 12vw;
-            .section__par {
-                margin-left: 17vw;
-                line-height: 2rem;
+            .section-right {
+                padding-right: 12vw;
+                text-align: right;
+                .section__par {
+                    margin-left: 17vw;
+                    line-height: 2rem;
+                }
             }
         }
     }
         /* Devices minimum 1025px */
-    .main {
-        .section {
-            padding-left: 12vw;
-            .section__par {
-                width: 80%;
-                line-height: 2.3rem;
+    @media only screen and (min-width: 1025px) {
+        .main {
+            .section {
+                padding-left: 12vw;
+                .section__par {
+                    width: 80%;
+                    line-height: 2.3rem;
+                }
             }
-        }
-        .section-right {
-            padding-right: 12vw;
-            .section__par {
-                margin-left: 17vw;
-                line-height: 2.3rem;
+            .section-right {
+                padding-right: 12vw;
+                text-align: right;
+                .section__par {
+                    margin-left: 17vw;
+                    line-height: 2.3rem;
+                }
             }
         }
     }

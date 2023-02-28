@@ -90,14 +90,14 @@ h1 {
     font-family: "aileron", "barlow";
     font-weight: 900;
 
-    color: $header-color;
+    color: $h-color-dark;
 }
 
 h2 {
     font-family: "aileron", "barlow";
     font-weight: 700;
 
-    color: $header-color;
+    color: $h-color-dark;
 
 }
 
@@ -106,7 +106,7 @@ h3, h4, h5, h6 {
     font-weight: normal;
     font-weight: 500;
 
-    color: $header-color;
+    color: $h-color-dark;
 }
 
 body {
@@ -128,12 +128,10 @@ em {
 /* Setting up the a link */ 
 a, a:visited, a:active {
     text-decoration: none;
-    color: $text-color;
+    color: $h-aqua;
     @media (hover:hover) {
         &:hover {
-            & {
-                color: $link-hover;
-            }
+            color: $link-hover;
         }
     }
 }
@@ -151,9 +149,9 @@ hr {
 }
 
 @media only screen and (max-width: 480px) {
-    $base-font-size: 16px;
+    $base-font-size: 18px;
     html {
-        background-image: url(../../img/header-500.svg);
+        background-color: $panna-darker;
         background-size: contain;
         -webkit-background-size: contain;
         -moz-background-size: contain;
@@ -164,7 +162,7 @@ hr {
             .block--main {
                 background-color: transparent;
                 .block__section {
-                    background-color: $small-bg-color;
+                    background-color: $light-blue-white;
                 }
             }
         }

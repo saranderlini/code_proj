@@ -4,10 +4,12 @@ body {
         display: flex;
         align-items: center;
         justify-content: space-between;
+        position: fixed;
+        width: 100%;
         
         .material-symbols-outlined {
             font-size: 2.5rem;
-            margin-left: 1rem;
+            margin-right: 1rem;
             position: relative;
         }
         .block__nav__list {
@@ -27,8 +29,10 @@ body {
             flex-direction: column;
             padding: 0.5rem 0.1rem;
             position: absolute;
+            text-align: right;
             text-shadow: 0 0 5px $azure-white;
             visibility: visible;
+            right: 0;
             li {
                 list-style: none;
                 padding: 0.4rem;
@@ -42,12 +46,12 @@ body {
             }
         }
     }
-    .block__nav__right {
+    .block__nav__left {
         right: 5vw;
         font-size: 1.2rem;
         
         a {
-            margin-right: 0.5rem;
+            margin-left: 0.5rem;
             i {
                 color: $header-color;
             }

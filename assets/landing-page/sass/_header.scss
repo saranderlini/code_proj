@@ -1,5 +1,5 @@
 html {
-    background: $light-blue-white;
+    background: $dark-grey;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -15,7 +15,7 @@ html {
                 color: $header-color;
                 position: relative;
                 text-shadow: 0.2rem 0.2rem 1rem rgba(221, 221, 225, 0.679);
-                top: 30vh;
+                top: 17vh;
                 h1 {
                     @include header-h1;
                 }
