@@ -74,13 +74,13 @@ $space-amounts: (1,2,3,4,5);
 /* barlow for h1 */
 @font-face {
     font-family: "barlow";
-    src: url(../../font/barlow_condensed/BarlowCondensed-Black.ttf);
+    src: url(../../font/barlow_condensed/BarlowCondensed-Bold.ttf);
     font-weight: 900;
 }
 /* barlow for h2 */
 @font-face {
     font-family: "barlow";
-    src: url(../../font/barlow_condensed/BarlowCondensed-Bold.ttf) format(ttf);
+    src: url(../../font/barlow_condensed/BarlowCondensed-Medium.ttf) format(ttf);
     font-weight: 700;
 }
 
@@ -98,7 +98,6 @@ h2 {
     font-weight: 700;
 
     color: $h-color-dark;
-
 }
 
 h3, h4, h5, h6 {
@@ -151,18 +150,26 @@ hr {
 @media only screen and (max-width: 480px) {
     $base-font-size: 18px;
     html {
-        background-color: $panna-darker;
-        background-size: contain;
-        -webkit-background-size: contain;
-        -moz-background-size: contain;
-        -o-background-size: contain;
+        background-image: url(../../img/triangle-light-500.svg);
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
         body {
             font-size: $base-font-size;
             line-height: 2rem;
+            .block__header {
+                h1 {
+                    text-shadow: 0.2rem 0.2rem 1rem $light-blue-white;
+                }
+            }
             .block--main {
                 background-color: transparent;
                 .block__section {
                     background-color: $light-blue-white;
+                    &:nth-child(even) {
+                        background-color: $dark-grey;
+                    }
                 }
             }
         }
@@ -172,18 +179,23 @@ hr {
 @media only screen and (min-width: 481px) and (max-width: 768px) {
     $base-font-size: 18px;
     html {
-        background-image: url(../../img/header-770.svg);
-        -webkit-background-size: contain;
-        -moz-background-size: contain;
-        -o-background-size: contain;
-        background-size: contain;
+        background-image: url(../../img/triangle-light-768.svg);
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
         body {
             font-size: $base-font-size;
             line-height: 2.2rem;
+            .block__header {
+                h1 {
+                    text-shadow: 0.2rem 0.2rem 1rem $panna;
+                }
+            }
             .block--main {
                 background-color: transparent;
                 .block__section {
-                    background-color: $medium-bg-color;
+                    background-color: $azure-white;
                 }
             }
         }
@@ -193,18 +205,23 @@ hr {
 @media only screen and (min-width: 769px) and (max-width: 1024px) {
     $base-font-size: 20px;
     html {
-        background-image: url(../../img/header-1024.svg);
-        -webkit-background-size: contain;
-        -moz-background-size: contain;
-        -o-background-size: contain;
-        background-size: contain;
+        background-image: url(../../img/triangle-light-1024.svg);
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
         body {
             font-size: $base-font-size;
             line-height: 2.5rem;
+            .block__header {
+                h1 {
+                    text-shadow: 0.2rem 0.2rem 1rem $light-blue-white;
+                }
+            }
             .block--main {
                 background-color: transparent;
                 .block__section {
-                    background-color: $medium-bg-color;
+                    background-color: $azure-white;
                 }
             }
         }
@@ -218,14 +235,19 @@ hr {
         body {
             font-size: $base-font-size;
             line-height: 3rem;
+            .block__header {
+                h1 {
+                    text-shadow: 0.2rem 0.2rem 1.5rem $azure-white;
+                }
+            }
             .block--main {
-                background-image: url(../../img/header-1200.svg);
+                background-image: url(../../img/triangle-light-1200.svg);
                 -webkit-background-size: cover;
                 -moz-background-size: cover;
                 -o-background-size: cover;
                 background-size: cover;
                 .block__section {
-                    background-color: $big-bg-color;
+                    background-color: $azure-white;
                 }
             }
         }

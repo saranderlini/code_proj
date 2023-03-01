@@ -45,7 +45,9 @@ body {
         /* larger screens */
         @media only screen and (min-width: 1025px) {
             .block__section {
-                margin-bottom: 3rem;
+                padding-bottom: 1.5rem;
+                margin-bottom: 1.5rem;
+
                 .block__section__title {
                     font-size: 3rem;
                     margin-left: 20%;

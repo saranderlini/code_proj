@@ -17,7 +17,7 @@
 }
 
 @mixin medium-header {
-    background: url(../../img/header-1024.svg);
+    background: url(../../img/triangle-light-1024.svg);
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -26,7 +26,7 @@
 }
 
 @mixin large-header {
-    background: url(../../img/header-1200.svg);
+    background: url(../../img/triangle-light-1200.svg);
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -52,12 +52,16 @@
     color: $h-color-dark;
     font-size: 0.875rem;
     font-size: clamp(0.875rem, 0.7211538461538461rem + 0.7692307692307693vw, 1.875rem);
+    transition-property: font-size;
+    transition-duration: 0.3s;
 }
 
 @mixin nav-items-hover {
-    border-color: $link-hover;
-    color: $link-hover;
-    transform: scale(1.1);    
+    color: $h-color-dark;
+    font-size: 1.125rem;
+    font-size: clamp(1.125rem, 0.8173076923076923rem + 1.5384615384615385vw, 3.125rem);
+    text-shadow: 0 0 0.3rem $panna-darker;
+    
 }
 
 @mixin small-button {
@@ -68,7 +72,7 @@
     border-radius: 50%;
     border: 3px solid $text-color;
     background-color: $text-white;
-    z-index: 10;
+    z-index: 2;
 }
 
 @mixin small-square {
@@ -102,7 +106,7 @@
     border: none;
     border-top: 5px solid;
     border-radius: 20px;
-    z-index: 12;
+    z-index: 3;
     top: -0.3rem;
     color: $bar-fill;
 }
@@ -114,7 +118,7 @@
     border: none;
     border-top: 5px solid;
     border-radius: 20px;
-    z-index: 12;
+    z-index: 3;
     top: -0.3rem;
     color: $bar-fill;
 }

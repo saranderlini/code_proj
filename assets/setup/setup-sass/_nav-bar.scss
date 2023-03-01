@@ -1,31 +1,74 @@
 body {
     .block__nav {
-        padding-top: 1rem;
-        display: flex;
         align-items: center;
+        background-color: transparent;
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+        display: flex;
+        padding-top: 1rem;
         justify-content: space-between;
         position: fixed;
+        text-shadow: 0 0 1.1rem $light-blue-white;
         width: 100%;
+        z-index: 4;
         
-        .material-symbols-outlined {
+        .menu-btn {
             font-size: 2.5rem;
             margin-right: 1rem;
             position: relative;
         }
-        .block__nav__list {
+        /* invisible when menu closed */
+        .close-btn {
             color: transparent;
             font-size: 0;
             position: absolute;
-            transition-property: font-size;
             transition-property: color;
-            transition-duration: 2s;
+            text-shadow: none;
+            transition-delay: 2s;
+            transition-duration: 1s;
+            a, a:hover {
+                color: transparent;
+                text-shadow: none;            transition-property: color;
+                transition-delay: 2s;
+                transition-duration: 1s;
+            }
+        }
+        .block__nav__list {
+            color: transparent;
+            font-size: 0;
+            list-style: none;
+            position: absolute;
+            background-color: none;
+            @media (hover:hover) {
+                transition-property: color background-color;
+                transition-duration: 2s;
+                font-size: 0;
+            }
         }
     }
-    .material-symbols-outlined:hover {
-        .block__nav__list {
-            color: $text-color;
+    /* when it is open */
+    .menu-btn:hover {
+        .close-btn {
+            color: $text-white;
             display: flex;
-            font-size: 12px;
+            font-size: 2rem;
+            position: absolute;
+            right: 0;
+            top: 0;
+            z-index: 999;
+            a {
+                color: $text-white;
+                @media (hover:hover) {
+                    &:hover {
+                        text-shadow: 0 0 1.1rem $light-blue-white;
+                    }
+                }
+            }
+        }
+        .block__nav__list {
+            /*color: $azure-white;
+            display: flex;
+            font-size: 1.125rem;
             flex-direction: column;
             padding: 0.5rem 0.1rem;
             position: absolute;
@@ -33,8 +76,12 @@ body {
             text-shadow: 0 0 5px $azure-white;
             visibility: visible;
             right: 0;
+            z-index: 999;
+            @media (hover:hover) {
+                font-size: 1.125rem;
+                font-size: clamp(1.125rem, 0.9125rem + 1.0625vw, 2.1875rem);
+            }
             li {
-                list-style: none;
                 padding: 0.4rem;
             }
             @media (hover:hover) {
@@ -43,17 +90,55 @@ body {
                         color: $link-hover;
                     }
                 }
+            }*/
+            background-color: $petroleum;
+            color: $text-white;
+            display: flex;
+            font-size: 2rem;
+            flex-direction: column;
+            margin: auto;
+            padding: 6rem 3rem;
+            position: absolute;
+            right: -1rem;
+            text-align: center;
+            top: -1rem;
+            width: 100vw;
+            z-index: 4;
+            .home-btn, .first, .second, .third {
+                padding: 1.5rem 0;
+                .block__nav__linkname {
+                    color: $azure-white;
+                    text-shadow: none;
+                }
+                @media (hover:hover) {
+                    .block__nav__linkname {
+                        transition-property: color;
+                        transition-duration: 0.2s;
+                    }
+                    .block__nav__linkname:hover {
+                        color: $panna-darker;
+                    }
+                }
             }
         }
     }
+
+    /* social links to the left */
     .block__nav__left {
-        right: 5vw;
-        font-size: 1.2rem;
-        
+        left: 1.5vw;
+        position: relative;
         a {
-            margin-left: 0.5rem;
+            margin-left: 1.5rem;
             i {
-                color: $header-color;
+                size: clamp(0.5rem, 0.35rem + 0.75vw, 1.25rem);
+                color: $h-color-dark;
+            }
+        }
+        @media (hover:hover) {
+            a:hover {
+                i {
+                    color: $h-aqua;
+                }
             }
         }
     }

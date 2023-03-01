@@ -1,7 +1,11 @@
 body {
     .block--main {
         .block__section {
-            padding-bottom: 2rem;
+            padding-bottom: 1rem;
+            &:last-of-type {
+                padding-top: 1.5rem;
+                margin: 2rem 0;
+            }
         }
     }
 }
