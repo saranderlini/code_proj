@@ -122,3 +122,12 @@
     top: -0.3rem;
     color: $bar-fill;
 }
+
+@function set-text-color($color) {
+    @if (lightness( $color ) > 50) {
+        @return $text-color;
+    }
+    @else {
+        @return $light-blue-white;
+    }
+}

@@ -3,6 +3,18 @@ body {
         .block__section {
             width: 100%;
             margin: auto;
+            background-color: $light-blue-white;
+            color: set-text-color($light-blue-white);
+            h1, h2, h3, h4, h5, h6 {
+                color: $h-color-dark;
+            }
+            &:nth-of-type(even) {
+                background-color: $dark-grey;
+                color: set-text-color($dark-grey);
+                h1, h2, h3, h4, h5, h6 {
+                    color: lighten($h-aqua, 15);
+                }
+            }
             .block__section__title {
                 display: inline-flex;
                 padding: 1rem 0;
@@ -17,11 +29,7 @@ body {
             .block__section__par {
                 padding: 0 2rem 0.5rem;
                 margin: auto;
-                .block__section__par__subtitle {
-                    color: $header-color;
-                }
                 .block__section__par__child {
-                    color: darken($text-color, 10);
                     padding-bottom: 1rem;
                 }
             }
@@ -35,7 +43,6 @@ body {
                         font-size: 5vh;
                     }
                 }
-    
                 .block__section__par {
                     padding: 0.5rem 4rem;
                 }

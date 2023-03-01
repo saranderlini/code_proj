@@ -5,6 +5,7 @@
                 padding: 1rem 0 0.5rem 1rem;
                 border: none;
                 border-left: 3px solid $black-hover;
+
                 .par__ruler__desc, .par__work__column {
                     width: 90%;
                     .par__ruler__desc__card, .par__work__card, .par__work__card-rule {
@@ -26,6 +27,9 @@
                         }
                     }
                 }
+            }
+            .par__ruler {
+                border-left-color: $light-blue;
             }
         }
     
@@ -77,6 +81,9 @@
                                 }
                             }
                         }
+                    }
+                    .par__ruler__desc:first-of-type, .par__ruler__desc:last-of-type {
+                        border-color: $light-blue;
                     }
     
                 }
@@ -149,6 +156,7 @@
                                     line-height: 1.8rem;
                                     &::before {
                                         @include horizontal-ruler;
+                                        border-color: $light-blue;
                                         top: -10px;
                                         left: -35px;
                                     }
@@ -162,6 +170,7 @@
                             }
                         }
                     }
+                    /* Work section */
                     .par__work__column {
                         min-width: 450px;
                         max-width: 510px;

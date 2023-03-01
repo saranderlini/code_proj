@@ -47,14 +47,14 @@ body {
         }
     }
     /* when it is open */
-    .menu-btn:hover {
+    .menu-btn:hover, .menu-btn:active, .menu-btn:link {
         .close-btn {
             color: $text-white;
             display: flex;
             font-size: 2rem;
             position: absolute;
             right: 0;
-            top: 0;
+            top: 32rem;
             z-index: 999;
             a {
                 color: $text-white;

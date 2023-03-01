@@ -89,15 +89,11 @@ $space-amounts: (1,2,3,4,5);
 h1 {
     font-family: "aileron", "barlow";
     font-weight: 900;
-
-    color: $h-color-dark;
 }
 
 h2 {
     font-family: "aileron", "barlow";
     font-weight: 700;
-
-    color: $h-color-dark;
 }
 
 h3, h4, h5, h6 {
@@ -105,7 +101,6 @@ h3, h4, h5, h6 {
     font-weight: normal;
     font-weight: 500;
 
-    color: $h-color-dark;
 }
 
 body {
@@ -158,18 +153,10 @@ hr {
         body {
             font-size: $base-font-size;
             line-height: 2rem;
+            color: set-text-color(background-color);
             .block__header {
                 h1 {
                     text-shadow: 0.2rem 0.2rem 1rem $light-blue-white;
-                }
-            }
-            .block--main {
-                background-color: transparent;
-                .block__section {
-                    background-color: $light-blue-white;
-                    &:nth-child(even) {
-                        background-color: $dark-grey;
-                    }
                 }
             }
         }
@@ -192,12 +179,6 @@ hr {
                     text-shadow: 0.2rem 0.2rem 1rem $panna;
                 }
             }
-            .block--main {
-                background-color: transparent;
-                .block__section {
-                    background-color: $azure-white;
-                }
-            }
         }
     }
 }
@@ -218,12 +199,6 @@ hr {
                     text-shadow: 0.2rem 0.2rem 1rem $light-blue-white;
                 }
             }
-            .block--main {
-                background-color: transparent;
-                .block__section {
-                    background-color: $azure-white;
-                }
-            }
         }
     }
 }
@@ -238,16 +213,6 @@ hr {
             .block__header {
                 h1 {
                     text-shadow: 0.2rem 0.2rem 1.5rem $azure-white;
-                }
-            }
-            .block--main {
-                background-image: url(../../img/triangle-light-1200.svg);
-                -webkit-background-size: cover;
-                -moz-background-size: cover;
-                -o-background-size: cover;
-                background-size: cover;
-                .block__section {
-                    background-color: $azure-white;
                 }
             }
         }
