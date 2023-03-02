@@ -11,4 +11,13 @@ body {
             }
         }
     }
+    @media only screen and (min-width: 1025px) {
+        .block--main {
+            .block__section {
+                .block__section__title {
+                    margin-left: 8rem;
+                }
+            }
+        }
+    }
 }

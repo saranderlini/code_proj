@@ -47,6 +47,9 @@
                                 color: lighten($light-blue, 13);
                                 margin-bottom: 0.5rem;
                             }
+                            &:focus-visible, &:focus-within, &:link {
+                                text-decoration: none;
+                            }
                         }
                     }
                     &[open] {

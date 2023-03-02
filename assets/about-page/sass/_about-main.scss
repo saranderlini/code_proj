@@ -59,12 +59,12 @@
                             position: relative;
                             &::after {
                                 @include small-square;
-                                background-color: $blue-grey;
+                                background-color: $light-blue-white;
                                 width: 25px;
                                 height: 10px;
-                                right: -6px;
+                                right: -9px;
                                 top: -9px;
-                                border-radius: 25px;   
+                                border-radius: 25px;
                             }    
                         }
                         .par__ruler__desc__card, .par__work__card-rule, .par__work__card {
@@ -80,6 +80,11 @@
                                     left: 25%;
                                 }
                             }
+                        }
+                    }
+                    .par__ruler__desc:last-of-type {
+                        &::after {
+                            background-color: $dark-grey;
                         }
                     }
                     .par__ruler__desc:first-of-type, .par__ruler__desc:last-of-type {
