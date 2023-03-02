@@ -15,7 +15,8 @@ body {
         .menu-btn {
             font-size: 2.5rem;
             margin-right: 1rem;
-            position: relative;
+            /*position: relative;*/
+            position: static;
         }
         /* invisible when menu closed */
         .close-btn {
@@ -53,7 +54,8 @@ body {
             display: flex;
             font-size: 2rem;
             position: absolute;
-            right: 0;
+            /*right: 0;*/
+            right: 1rem;
             top: 32rem;
             z-index: 999;
             a {
@@ -102,7 +104,8 @@ body {
             right: -1rem;
             text-align: center;
             top: -1rem;
-            width: 100vw;
+            /*width: 100vw;*/
+            width: 110%;
             z-index: 4;
             .home-btn, .first, .second, .third {
                 padding: 1.5rem 0;
