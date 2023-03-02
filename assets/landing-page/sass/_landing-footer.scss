@@ -4,21 +4,23 @@ body {
         align-items: center;
         background-color: $green-footer;
         color: set-text-color($green-footer);
-        font-size: 0.9rem;
+        font-size: 0.7rem;
+        font-size: clamp(0.7rem, 0.6599999999999999rem + 0.2000000000000001vw, 0.9rem);
         justify-content: space-between;
-        padding: 0.5rem 2rem 0;
         a {
             color: set-text-color($green-footer);
             .arrow-up {
                 position: relative;
-                top: 0.5rem;
-                border: 2px solid $header-color;
+                top: 0.3rem;
+                border: 2px solid $text-color;
                 border-radius: 25px;
-                padding: 1.5px;
             }
             i {
-                padding-right: 1rem;
+                &:first-of-type {
+                    padding-right: 0.6rem;
+                }
             }
+
         }
         a:hover, i:hover {
             color: $petroleum;
@@ -27,5 +29,25 @@ body {
                 border-color: $petroleum;
             }
         }
+    }
+    @media only screen and (min-width: 769px) and (max-width: 1024px) {
+        .landing-footer {
+            padding: 0 2rem;
+            a {
+                .arrow-up {
+                    top: 0.4rem;
+                }
+            }
+        }
+    }
+    @media only screen and (min-width: 1025px) {
+        .landing-footer {
+            padding: 0 2.2rem;
+            a {
+                .arrow-up {
+                    top: 0.4rem;
+                }
+            }
+        }    
     }
 }
