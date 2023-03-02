@@ -1,0 +1,31 @@
+body {
+    .landing-footer {
+        display: flex;
+        align-items: center;
+        background-color: $green-footer;
+        color: set-text-color($green-footer);
+        font-size: 0.9rem;
+        justify-content: space-between;
+        padding: 0.5rem 2rem 0;
+        a {
+            color: set-text-color($green-footer);
+            .arrow-up {
+                position: relative;
+                top: 0.5rem;
+                border: 2px solid $header-color;
+                border-radius: 25px;
+                padding: 1.5px;
+            }
+            i {
+                padding-right: 1rem;
+            }
+        }
+        a:hover, i:hover {
+            color: $petroleum;
+            transform: scale(1.1);
+            .arrow-up:hover {
+                border-color: $petroleum;
+            }
+        }
+    }
+}
