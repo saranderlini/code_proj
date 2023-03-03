@@ -5,6 +5,7 @@ body {
         backdrop-filter: blur(8px);
         -webkit-backdrop-filter: blur(8px);
         display: flex;
+        flex-direction: row-reverse;
         padding-top: 0.1rem;
         justify-content: space-between;
         position: fixed;
@@ -12,7 +13,7 @@ body {
         width: 100%;
         z-index: 4;
         .block__nav__left {
-            left: 1.5vw;
+            left: -4.5vw;
             position: relative;
             a {
                 margin-left: 1.5rem;
@@ -43,7 +44,7 @@ body {
                     flex-direction: column;
                     position: absolute;
                     top: 3rem;
-                    right: 7rem;
+                    right: -7rem;
                     list-style-type: none;
                     li {
                         visibility: visible;
