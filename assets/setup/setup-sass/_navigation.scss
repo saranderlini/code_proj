@@ -30,7 +30,7 @@ body {
                     display: none;
                 }
             }
-            .menu-btn:hover {
+            &:hover {
                 .block__nav__list {
                     display: flex;
                     flex-direction: column;
@@ -40,18 +40,6 @@ body {
                     .block__nav__linkname {
                         @include nav-items;
                     }
-                }
-            }
-        }
-    }
-}
-
-@media (hover:hover) {
-    .block__nav {
-        .block__nav__list {
-            a:hover {
-                .block__nav__linkname {
-                    @include nav-items-hover;
                 }
             }
         }
