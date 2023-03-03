@@ -5,129 +5,13 @@ body {
         backdrop-filter: blur(8px);
         -webkit-backdrop-filter: blur(8px);
         display: flex;
-        padding-top: 1rem;
+        padding-top: 0.1rem;
         justify-content: space-between;
         position: fixed;
         text-shadow: 0 0 1.1rem $light-blue-white;
         width: 100%;
         z-index: 4;
         
-        .menu-btn {
-            font-size: 2.5rem;
-            margin-right: 1rem;
-            position: static;
-            /*position: relative;*/
-        }
-        /* invisible when menu closed */
-        .close-btn {
-            color: transparent;
-            font-size: 0;
-            position: absolute;
-            transition-property: color;
-            text-shadow: none;
-            transition-delay: 2s;
-            transition-duration: 1s;
-            a, a:hover {
-                color: transparent;
-                text-shadow: none;            
-                transition-property: color;
-                transition-delay: 2s;
-                transition-duration: 1s;
-            }
-        }
-        .block__nav__list {
-            color: transparent;
-            font-size: 0;
-            list-style: none;
-            position: absolute;
-            background-color: none;
-            @media (hover:hover) {
-                transition-property: color background-color;
-                transition-duration: 2s;
-                font-size: 0;
-            }
-        }
-        /* when it is open */
-        .menu-btn:hover {
-            .close-btn {
-                color: $text-white;
-                display: flex;
-                font-size: 2rem;
-                position: absolute;
-                /*right: 0;*/
-                right: 1rem;
-                visibility: visible;
-                top: 32rem;
-                z-index: 999;
-                a {
-                    color: $text-white;
-                    @media (hover:hover) {
-                        &:hover {
-                            text-shadow: 0 0 1.1rem $light-blue-white;
-                        }
-                    }
-                }
-            }
-            .block__nav__list {
-                /*color: $azure-white;
-                display: flex;
-                font-size: 1.125rem;
-                flex-direction: column;
-                padding: 0.5rem 0.1rem;
-                position: absolute;
-                text-align: right;
-                text-shadow: 0 0 5px $azure-white;
-                visibility: visible;
-                right: 0;
-                z-index: 999;
-                @media (hover:hover) {
-                    font-size: 1.125rem;
-                    font-size: clamp(1.125rem, 0.9125rem + 1.0625vw, 2.1875rem);
-                }
-                li {
-                    padding: 0.4rem;
-                }
-                @media (hover:hover) {
-                    li:hover {
-                        .block__nav__linkname {
-                            color: $link-hover;
-                        }
-                    }
-                }*/
-                background-color: $petroleum;
-                color: $text-white;
-                display: flex;
-                font-size: 2rem;
-                flex-direction: column;
-                margin: auto;
-                padding: 6rem 3rem;
-                position: absolute;
-                right: -1rem;
-                text-align: center;
-                top: -1rem;
-                visibility: visible;
-                /*width: 100vw;*/
-                width: 110%;
-                z-index: 4;
-                .home-btn, .first, .second, .third {
-                    padding: 1.5rem 0;
-                    .block__nav__linkname {
-                        color: $azure-white;
-                        text-shadow: none;
-                    }
-                    @media (hover:hover) {
-                        .block__nav__linkname {
-                            transition-property: color;
-                            transition-duration: 0.2s;
-                        }
-                        .block__nav__linkname:hover {
-                            color: $panna-darker;
-                        }
-                    }
-                }
-            }
-        }
-    
         /* social links to the left */
         .block__nav__left {
             left: 1.5vw;
@@ -143,6 +27,161 @@ body {
                 a:hover {
                     i {
                         color: $h-aqua;
+                    }
+                }
+            }
+        }
+        /* dropdown menu on the right */
+        .block__nav__right {
+            padding: 0.2rem 0;
+            .menu-btn {
+                display: block;
+                cursor: pointer;
+                font-size: 2.5rem;
+                margin-right: 1rem;
+                position: relative;
+                /*position: static;*/
+            }
+
+            /* invisible when menu closed */
+            .close-btn {
+                color: transparent;
+                font-size: 0;
+                position: absolute;
+                text-shadow: none;
+                -o-transition-property: color;
+                -webkit-transition-property: color;
+                -moz-transition-property: color;
+                transition-property: color;
+                -o-transition-delay: 2s;
+                -moz-transition-delay: 2s;
+                -webkit-transition-delay: 2s;
+                transition-delay: 2s;
+                -o-transition-duration: 1s;
+                -moz-transition-duration: 1s;
+                -webkit-transition-duration: 1s;
+                transition-duration: 1s;
+
+                a, a:hover {
+                    color: transparent;
+                    text-shadow: none;     
+                    -o-transition-property: color;
+                    -webkit-transition-property: color;
+                    -moz-transition-property: color;
+                    transition-property: color;
+                    -o-transition-delay: 2s;
+                    -moz-transition-delay: 2s;
+                    -webkit-transition-delay: 2s;
+                    transition-delay: 2s;
+                    -o-transition-duration: 1s;
+                    -moz-transition-duration: 1s;
+                    -webkit-transition-duration: 1s;
+                    transition-duration: 1s;
+                }
+            }
+            .block__nav__list {
+                color: transparent;
+                background-color: none;
+                font-size: 0;
+                list-style: none;
+
+                position: absolute;
+                visibility: hidden;
+                @media (hover:hover) {
+                    -o-transition-property: color background-color;
+                    -webkit-transition-property: color background-color;
+                    -moz-transition-property: color background-color;
+                    transition-property: color background-color;
+                    -o-transition-duration: 2s;
+                    -moz-transition-duration: 2s;
+                    -webkit-transition-duration: 2s;
+                    transition-duration: 2s;
+                    font-size: 0;
+                }
+            }
+            /* when it is open */
+            &:hover {
+                .close-btn {
+                    color: $text-white;
+                    display: flex;
+                    font-size: 2rem;
+                    position: absolute;
+                    /*right: 0;*/
+                    right: 1rem;
+                    visibility: visible;
+                    top: 32rem;
+                    z-index: 999;
+                    a {
+                        color: $text-white;
+                        @media (hover:hover) {
+                            &:hover {
+                                text-shadow: 0 0 1.1rem $light-blue-white;
+                            }
+                        }
+                    }
+                }
+                .block__nav__list {
+                    /*color: $azure-white;
+                    display: flex;
+                    font-size: 1.125rem;
+                    flex-direction: column;
+                    padding: 0.5rem 0.1rem;
+                    position: absolute;
+                    text-align: right;
+                    text-shadow: 0 0 5px $azure-white;
+                    visibility: visible;
+                    right: 0;
+                    z-index: 999;
+                    @media (hover:hover) {
+                        font-size: 1.125rem;
+                        font-size: clamp(1.125rem, 0.9125rem + 1.0625vw, 2.1875rem);
+                    }
+                    li {
+                        padding: 0.4rem;
+                    }
+                    @media (hover:hover) {
+                        li:hover {
+                            .block__nav__linkname {
+                                color: $link-hover;
+                            }
+                        }
+                    }*/
+                    background-color: $petroleum;
+                    color: $text-white;
+                    display: flex;
+                    font-size: 2rem;
+                    flex-direction: column;
+
+                    padding: 6rem 3rem;
+                    position: absolute;
+                    right: -1rem;
+                    text-align: center;
+                    top: -1rem;
+                    visibility: visible;
+                    width: 100vw;
+                    /*width: 110%;*/
+                    z-index: 4;
+                    .home-btn, .first, .second, .third {
+                        padding: 1.5rem 0;
+                        .block__nav__linkname {
+                            color: $azure-white;
+                            text-shadow: none;
+                        }
+                        @media (hover:hover) {
+                            .block__nav__linkname {
+                                -o-transition-property: color;
+                                -webkit-transition-property: color;
+                                -moz-transition-property: color;
+                                transition-property: color;
+                                -o-transition-duration: 0.2s;
+                                -moz-transition-duration: 0.2s;
+                                -webkit-transition-duration: 0.2s;
+                                transition-duration: 0.2s;
+                            }
+                            .block__nav__linkname:hover {
+                                color: $panna-darker;
+                            }
+                        }
                     }
                 }
             }
