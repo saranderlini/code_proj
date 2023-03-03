@@ -34,7 +34,7 @@ body {
                 height: 0;
             }
         }
-        .block__nav__right:hover {
+        .block__nav__right:hover, .block__nav__right:focus {
             .block__nav__list {
                 visibility: visible;
                 display: flex;
@@ -46,6 +46,7 @@ body {
                 list-style-type: none;
                 .block__nav__linkname {
                     @include nav-items;
+                    
                 }
             }
         }
