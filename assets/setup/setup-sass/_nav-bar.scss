@@ -84,6 +84,7 @@ body {
                 background-color: none;
                 font-size: 0;
                 list-style: none;
+                list-style-type: none;
 
                 position: absolute;
                 visibility: hidden;
@@ -99,8 +100,72 @@ body {
                     font-size: 0;
                 }
             }
-            /* when it is open */
-            &:hover {
+        }
+        /* when it is open */
+        .block__nav__right:hover {
+            .block__nav__list {
+                /*color: $azure-white;
+                display: flex;
+                font-size: 1.125rem;
+                flex-direction: column;
+                padding: 0.5rem 0.1rem;
+                position: absolute;
+                text-align: right;
+                text-shadow: 0 0 5px $azure-white;
+                visibility: visible;
+                right: 0;
+                z-index: 999;
+                @media (hover:hover) {
+                    font-size: 1.125rem;
+                    font-size: clamp(1.125rem, 0.9125rem + 1.0625vw, 2.1875rem);
+                }
+                li {
+                    padding: 0.4rem;
+                }
+                @media (hover:hover) {
+                    li:hover {
+                        .block__nav__linkname {
+                            color: $link-hover;
+                        }
+                    }
+                }*/
+                background-color: $petroleum;
+                color: $text-white;
+                display: flex;
+                font-size: 2rem;
+                flex-direction: column;
+
+                padding: 6rem 3rem;
+                position: absolute;
+                right: -1rem;
+                text-align: center;
+                top: -1rem;
+                visibility: visible;
+                width: 100vw;
+                /*width: 110%;*/
+                z-index: 4;
+                .home-btn, .first, .second, .third {
+                    padding: 1.5rem 0;
+                    .block__nav__linkname {
+                        color: $azure-white;
+                        text-shadow: none;
+                    }
+                    @media (hover:hover) {
+                        .block__nav__linkname {
+                            -o-transition-property: color;
+                            -webkit-transition-property: color;
+                            -moz-transition-property: color;
+                            transition-property: color;
+                            -o-transition-duration: 0.2s;
+                            -moz-transition-duration: 0.2s;
+                            -webkit-transition-duration: 0.2s;
+                            transition-duration: 0.2s;
+                        }
+                        .block__nav__linkname:hover {
+                            color: $panna-darker;
+                        }
+                    }
+                }
                 .close-btn {
                     color: $text-white;
                     display: flex;
@@ -116,70 +181,6 @@ body {
                         @media (hover:hover) {
                             &:hover {
                                 text-shadow: 0 0 1.1rem $light-blue-white;
-                            }
-                        }
-                    }
-                }
-                .block__nav__list {
-                    /*color: $azure-white;
-                    display: flex;
-                    font-size: 1.125rem;
-                    flex-direction: column;
-                    padding: 0.5rem 0.1rem;
-                    position: absolute;
-                    text-align: right;
-                    text-shadow: 0 0 5px $azure-white;
-                    visibility: visible;
-                    right: 0;
-                    z-index: 999;
-                    @media (hover:hover) {
-                        font-size: 1.125rem;
-                        font-size: clamp(1.125rem, 0.9125rem + 1.0625vw, 2.1875rem);
-                    }
-                    li {
-                        padding: 0.4rem;
-                    }
-                    @media (hover:hover) {
-                        li:hover {
-                            .block__nav__linkname {
-                                color: $link-hover;
-                            }
-                        }
-                    }*/
-                    background-color: $petroleum;
-                    color: $text-white;
-                    display: flex;
-                    font-size: 2rem;
-                    flex-direction: column;
-
-                    padding: 6rem 3rem;
-                    position: absolute;
-                    right: -1rem;
-                    text-align: center;
-                    top: -1rem;
-                    visibility: visible;
-                    width: 100vw;
-                    /*width: 110%;*/
-                    z-index: 4;
-                    .home-btn, .first, .second, .third {
-                        padding: 1.5rem 0;
-                        .block__nav__linkname {
-                            color: $azure-white;
-                            text-shadow: none;
-                        }
-                        @media (hover:hover) {
-                            .block__nav__linkname {
-                                -o-transition-property: color;
-                                -webkit-transition-property: color;
-                                -moz-transition-property: color;
-                                transition-property: color;
-                                -o-transition-duration: 0.2s;
-                                -moz-transition-duration: 0.2s;
-                                -webkit-transition-duration: 0.2s;
-                                transition-duration: 0.2s;
-                            }
-                            .block__nav__linkname:hover {
-                                color: $panna-darker;
                             }
                         }
                     }
