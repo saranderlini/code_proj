@@ -28,25 +28,27 @@ body {
                 font-size: 2.5rem;
             }
             .block__nav__list {
+                display: flex;
                 visibility: collapse;
                 color: transparent;
                 font-size: 0;
                 height: 0;
             }
-        }
-        .block__nav__right:hover, .block__nav__right:focus {
-            .block__nav__list {
-                visibility: visible;
-                display: flex;
-                width: 50%;
-                flex-direction: column;
-                position: absolute;
-                top: 1rem;
-                right: 1rem;
-                list-style-type: none;
-                .block__nav__linkname {
-                    @include nav-items;
-                    
+            .menu-btn:hover, .menu-btn:focus {
+                .block__nav__list {
+                    visibility: visible;
+                    display: flex;
+                    width: 50vw;
+                    height: 400px;
+                    flex-direction: column;
+                    position: absolute;
+                    top: 3rem;
+                    right: 7rem;
+                    list-style-type: none;
+                    li {
+                        visibility: visible;
+                        font-size: 1.4rem;
+                    }
                 }
             }
         }
