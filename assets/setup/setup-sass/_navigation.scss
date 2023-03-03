@@ -28,15 +28,21 @@ body {
                 font-size: 2.5rem;
             }
             .block__nav__list {
-                display: none;
+                visibility: collapse;
+                color: transparent;
+                font-size: 0;
+                height: 0;
             }
         }
         .block__nav__right:hover {
             .block__nav__list {
+                visibility: visible;
                 display: flex;
+                width: 50%;
                 flex-direction: column;
                 position: absolute;
-                top: 5rem;
+                top: 1rem;
+                right: 1rem;
                 list-style-type: none;
                 .block__nav__linkname {
                     @include nav-items;
