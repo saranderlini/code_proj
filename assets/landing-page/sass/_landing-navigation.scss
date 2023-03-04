@@ -1,9 +1,9 @@
 /* Navigation configuration for landing page */
-.nav {
+.home-nav {
     position: relative;
     width: 100%;
     outline: none;
-    .nav__list {
+    .home-nav__list {
         display: flex;
         justify-content: space-around;
         bottom: 0;
@@ -23,8 +23,8 @@
     }
 }
 @media (hover: hover) {
-    .nav {                
-        .nav__list {
+    .home-nav {                
+        .home-nav__list {
             .first, .second, .third {
                 a:hover {
                     .nav__linkname {

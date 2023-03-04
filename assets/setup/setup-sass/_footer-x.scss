@@ -1,0 +1,59 @@
+body {
+    position: relative;
+    .footer {
+        background-color: transparent;
+        background-size: cover;
+        align-items: center;
+        bottom: 0.2rem;
+        display: inline-flex;
+        position: absolute;
+        width: min-content;
+        .footer__to-top-page {
+            .arrow-up {
+                color: $header-color;
+                border: 2px solid $header-color;
+                border-radius: 25px;
+                padding: 1.5px;
+            }
+        }
+    }
+    @media only screen and (min-width: 769px) and (max-width: 1024px) {
+        .footer {
+            background-color: transparent;
+            position: absolute;
+            bottom: 0.3rem;
+            .footer__to-top-page {
+                margin-left: 2rem;
+                .arrow-up {
+                    font-size: 28px;
+                }
+            }
+        }
+    }
+    
+    @media only screen and (min-width: 1025px) {
+        .footer {
+            background-color: transparent;
+            position: absolute;
+            bottom: 0.4rem;
+            .footer__to-top-page {
+                margin-left: 2.2rem;
+                .arrow-up {
+                    font-size: 30px;
+                }
+            }
+        }
+    }
+}
+
+@media (hover:hover) {
+    .footer {
+        .footer__to-top-page:hover {
+            .material-symbols-rounded {
+                color: $link-hover;
+                border-color: $link-hover;  
+            }
+        }
+    }
+}
+    

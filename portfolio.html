@@ -13,8 +13,8 @@
     <body id="top">
         <header class="block__header">
 
-            <nav class="block__nav">
-                <div class="block__nav__left">
+            <nav class="nav" role="navigation">
+                <div class="nav__left">
                     <a href="https://www.instagram.com/saranderlini/?hl=it">
                         <i class="fa fa-instagram fa-lg" aria-hidden="true"></i>
                     </a>
@@ -22,32 +22,32 @@
                         <i class="fa fa-linkedin-square fa-lg" aria-hidden="true"></i>
                     </a>
                 </div>
-                <span class="material-symbols-outlined menu-btn">
-                    menu
-                    <span class="material-symbols-outlined close-btn"><a href="">close</a>
-                        </span>
-                    <ul class="block__nav__list">
+                <div class="nav__right" tabindex="0">
+                    <span class="material-symbols-outlined menu-btn">
+                    menu</span>
+                    <ul class="nav__dropdown" id="dropdown">
                         <li class="home-btn">
-                            <a href="index.html"><h2 class="block__nav__linkname">Home</h2></a>
+                            <a href="index.html"><h2 class="nav__linkname">Home</h2></a>
                         </li>
 
                         <li class="first">
-                            <a href="about.html"><h2 class="block__nav__linkname">About Me</h2></a>
+                            <a href="about.html"><h2 class="nav__linkname">About Me</h2></a>
                         </li>
 
                         <li class="second">
                             <a href="portfolio.html">
-                            <h2 class="block__nav__linkname">Portfolio</h2>
+                            <h2 class="nav__linkname">Portfolio</h2>
                             </a>
                         </li>
 
                         <li class="third">
                             <a href="contact.html">
-                            <h2 class="block__nav__linkname">Contacts</h2>
+                            <h2 class="nav__linkname">Contacts</h2>
                             </a>
                         </li>
+                        <span class="material-symbols-outlined close-btn"><a href="">close</a></span>
                     </ul>
-                </span>
+                </div>
             </nav>
             
             <h1 class="about__header__title">Portfolio.</h1>
@@ -86,10 +86,19 @@
                 </div>
             </section>
         </main>
-        <footer class="footer">
-            <a class="footer__to-top-page px-1" href="#top">
-                <span class="material-symbols-rounded arrow-up">arrow_upward</span>
+        <footer class="footer-bar px-1">
+            <a class="footer__to-top-page" href="#top">
+                <span class="material-symbols-rounded  arrow-up">arrow_upward</span>
             </a>
-        </footer> 
+            <p>2023. Built using HTML5, CSS ans Sass.</p>
+            <p class="footer-socials">
+                <a href="https://www.instagram.com/saranderlini/?hl=it">
+                    <i class="fa fa-instagram fa-lg" aria-hidden="true"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/sara-anderlini-656b6a193">
+                    <i class="fa fa-linkedin-square fa-lg" aria-hidden="true"></i>
+                </a>
+            </p>
+        </footer>
     </body>
 </html>    

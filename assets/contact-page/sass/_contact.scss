@@ -3,7 +3,6 @@ html {
         .block--main {
             .block__section {
                 .block__section__par {
-                    margin-bottom: 3rem;
                     .contact--list {
                         list-style-type: none;
                         .contact--list--block {
@@ -26,11 +25,17 @@ html {
                                 justify-content: space-between;
                                 width: 60%;
                                 margin: auto;
-                                a {
+                                a, a:visited, a:active {
                                     font-size: 22px;
                                     padding: 0.5rem 1rem;
                                 }
                             }    
+                        }
+                        a, a:visited, a:active, address {
+                            color: $dark-grey;
+                        }
+                        a:hover {
+                            color: $blue-par;
                         }
                     }
                 }
