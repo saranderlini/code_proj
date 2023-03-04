@@ -1,0 +1,18 @@
+body {
+    .nav {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        .nav__right {
+            position: relative;
+            ul {
+                display: none;
+            }
+        }
+        .nav__right:hover > ul {
+            display: block;
+            position: absolute;
+            right: 0;
+        }
+    }
+}
