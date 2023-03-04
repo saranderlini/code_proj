@@ -1,18 +1,29 @@
 body {
     .nav {
         display: flex;
-        width: 100%;
+        align-items: center;
         justify-content: space-between;
+        width: 100%;
         .nav__right {
             position: relative;
+            /*.menu-btn {
+                color: black;
+            }
+            #dropdown {
+                display: none;
+            }
+            #dropdown:target {
+                display: block;
+            }*/
             ul {
                 display: none;
             }
         }
-        .nav__right:hover > ul {
-            display: block;
-            position: absolute;
-            right: 0;
+        .nav__right:focus {
+            ul {
+                visibility: visible;
+                display: block;
+            }
         }
     }
 }

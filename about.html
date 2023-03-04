@@ -13,7 +13,7 @@
 
     <body id="top">
         <header class="block__header">
-            <nav class="nav">
+            <nav class="nav" role="navigation">
                 <div class="nav__left">
                     <a href="https://www.instagram.com/saranderlini/?hl=it">
                         <i class="fa fa-instagram fa-lg" aria-hidden="true"></i>
@@ -22,11 +22,13 @@
                         <i class="fa fa-linkedin-square fa-lg" aria-hidden="true"></i>
                     </a>
                 </div>
-                <div class="nav__right">
+                <div class="nav__right" tabindex="0">
+                    <!--<a href="#dropdown">-->
                     <span class="material-symbols-outlined menu-btn">
-                        menu
-                    </span>
-                        <ul class="dropdown">
+                    menu</span>
+                    <!--</a>-->
+                    
+                        <ul class="nav__dropdown" id="dropdown">
                             <li class="home-btn">
                                 <a href="index.html"><h2 class="nav__linkname">Home</h2></a>
                             </li>
