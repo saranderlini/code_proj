@@ -4,25 +4,182 @@ body {
         align-items: center;
         justify-content: space-between;
         width: 100%;
-        .nav__right {
+        position: fixed;
+
+        background-color: transparent;
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+        padding-top: 0.1rem;
+        width: 100%;
+        z-index: 4;
+        
+        /* social links to the left */
+        .nav__left {
+            left: 1.5vw;
             position: relative;
-            /*.menu-btn {
-                color: black;
+            a {
+                margin-left: 1.5rem;
+                i {
+                    size: clamp(0.5rem, 0.35rem + 0.75vw, 1.25rem);
+                    color: $h-color-dark;
+                    text-shadow: 0 0 1.1rem $light-blue-white;
+                }
             }
-            #dropdown {
-                display: none;
-            }
-            #dropdown:target {
-                display: block;
-            }*/
-            ul {
-                display: none;
+            @media (hover:hover) {
+                a:hover {
+                    i {
+                        color: $h-aqua;
+                    }
+                }
             }
         }
-        .nav__right:focus {
-            ul {
-                visibility: visible;
+        /* menu dropdown on the right */
+        .nav__right {
+            position: relative;
+            display: flex;
+            align-items: center;
+            padding: 0.2rem 0;
+            .menu-btn {
                 display: block;
+                cursor: pointer;
+                font-size: 2.5rem;
+                margin-right: 1rem;
+                position: relative;
+                /*position: static;*/
+            }
+            /* ul */
+            .nav__dropdown {
+                color: transparent;
+                background-color: none;
+                font-size: 0;
+                list-style: none;
+                list-style-type: none;
+
+                position: absolute;
+                visibility: hidden;
+                @media (hover:hover) {
+                    -o-transition-property: color background-color;
+                    -webkit-transition-property: color background-color;
+                    -moz-transition-property: color background-color;
+                    transition-property: color background-color;
+                    -o-transition-duration: 2s;
+                    -moz-transition-duration: 2s;
+                    -webkit-transition-duration: 2s;
+                    transition-duration: 2s;
+                    font-size: 0;
+                }
+                /* invisible when menu closed */
+                .close-btn {
+                    color: transparent;
+                    font-size: 0;
+                    position: absolute;
+                    text-shadow: none;
+                    
+                    -o-transition-property: color;
+                    -webkit-transition-property: color;
+                    -moz-transition-property: color;
+                    transition-property: color;
+                    -o-transition-delay: 2s;
+                    -moz-transition-delay: 2s;
+                    -webkit-transition-delay: 2s;
+                    transition-delay: 2s;
+                    -o-transition-duration: 1s;
+                    -moz-transition-duration: 1s;
+                    -webkit-transition-duration: 1s;
+                    transition-duration: 1s;
+
+                    a, a:hover {
+                        color: transparent;
+                        text-shadow: none;     
+                        -o-transition-property: color;
+                        -webkit-transition-property: color;
+                        -moz-transition-property: color;
+                        transition-property: color;
+                        -o-transition-delay: 2s;
+                        -moz-transition-delay: 2s;
+                        -webkit-transition-delay: 2s;
+                        transition-delay: 2s;
+                        -o-transition-duration: 1s;
+                        -moz-transition-duration: 1s;
+                        -webkit-transition-duration: 1s;
+                        transition-duration: 1s;
+                    }
+                }
+            }
+        }
+
+        /* when nav__right gets clicked on */
+        .nav__right:focus, .nav__right:hover {
+            .nav__dropdown {
+                visibility: visible;
+                outline: none;
+                position: absolute;
+                width: 100vw;
+                right: 0;
+                top: -1rem;
+
+                background-color: $petroleum;
+                font-size: 1.125rem;
+                font-size: clamp(1.125rem, 0.9125rem + 1.0625vw, 2.1875rem);
+                list-style-type: none;
+                padding: 5rem 2.5rem;
+                text-align: center;
+                word-wrap: break-word;
+                z-index: 999;
+
+                @media (hover:hover) {
+                    font-size: 1.125rem;
+                    font-size: clamp(1.125rem, 0.9125rem + 1.0625vw, 2.1875rem);
+                }
+                li {
+                    padding: 0.4rem;
+                }
+                @media (hover:hover) {
+                    li:hover {
+                        .block__nav__linkname {
+                            color: $link-hover;
+                        }
+                    }
+                }
+
+                .home-btn, .first, .second, .third {
+                    padding: 1.5rem 0;
+                    line-height: 2.5rem;
+
+                    .nav__linkname, .nav__linkname:active, .nav__linkname:visited {
+                        color: $light-blue-white;
+                    }
+                    @media (hover:hover) {
+                        .nav__linkname {
+                            -o-transition-property: color;
+                            -webkit-transition-property: color;
+                            -moz-transition-property: color;
+                            transition-property: color;
+                            -o-transition-duration: 0.2s;
+                            -moz-transition-duration: 0.2s;
+                            -webkit-transition-duration: 0.2s;
+                            transition-duration: 0.2s;
+                        }
+                        .nav__linkname:hover {
+                            color: $panna-darker;
+                        }
+                    }
+                }
+                .close-btn {
+                    position: absolute;
+                    right: 1rem;
+                    top: 29rem;
+                    color: $text-white;
+                    font-size: 2rem;
+                    a {
+                        color: $text-white;
+                        @media (hover:hover) {
+                            &:hover {
+                                text-shadow: 0 0 1.1rem $light-blue-white;
+                            }
+                        }
+                    }
+                }
             }
         }
     }
