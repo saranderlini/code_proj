@@ -88,7 +88,7 @@ body {
                     -webkit-transition-duration: 1s;
                     transition-duration: 1s;
 
-                    a, a:hover {
+                    a, a:visited, a:active, a:hover {
                         color: transparent;
                         text-shadow: none;     
                         -o-transition-property: color;
