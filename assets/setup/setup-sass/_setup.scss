@@ -146,10 +146,10 @@ hr {
     $base-font-size: 18px;
     html {
         background-image: url(../../img/triangle-light-500.svg);
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;
+        -webkit-background-size: contain;
+        -moz-background-size: contain;
+        -o-background-size: contain;
+        background-size: contain;
         body {
             font-size: $base-font-size;
             line-height: 2rem;

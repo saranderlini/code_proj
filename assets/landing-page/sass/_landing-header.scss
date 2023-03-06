@@ -10,27 +10,36 @@ html {
         @include smallest-header;
         height: 100vh;
         .header__title {
+            color: $header-color;
             display: inline-block;
+            height: 100vh;
+            padding: 2rem;
+            position: relative;
+            text-shadow: 0.2rem 0.2rem 1rem rgba(221, 221, 225, 0.679);
+            width: 100vw;
+            
             .header__title__child {
-                color: $header-color;
-                position: relative;
+                position: absolute;
                 line-height: 4rem;
-                text-shadow: 0.2rem 0.2rem 1rem rgba(221, 221, 225, 0.679);
-                top: 17vh;
+                top: 13vh;
+                margin-right: 2rem;
                 h1 {
                     @include header-h1;
                 }
-                h2 {
-                    @include header-h2;
-                }
             }
-            .header__pic-small {
+            .header__title-pic {
                 position: absolute;
-                bottom: -2vh;
-                right: 18vw;
-                transform: rotate(347deg);
-                z-index: 900;
-                width: 100px;
+                bottom: 0;
+                line-height: 3.5rem;
+
+                h2 {
+                    position: relative;
+                    @include header-h2;
+                    bottom: 30vh;
+                }
+                .header-pic {
+                    display: none;
+                }
             }
         }
     }
@@ -40,8 +49,26 @@ html {
         .header {
             @include small-header;
             .header__title {
+                position: relative;
                 .header__title__child {
-                    left: 1vw;
+                    left: 10vw;
+                    top: 17vh;
+                }
+                .header__title-pic {
+                    h2 {
+                        bottom: 20vh;
+                        left: 190px;
+                    }
+                    .header-pic {
+                        display: inline-block;
+                        height: 320px;
+                        position: absolute;
+                        bottom: 0;
+                        left: 16px;
+                        -moz-transform: matrix(-1, 0, 0, 1, 0, 0);
+                        -webkit-transform: matrix(-1, 0, 0, 1, 0, 0);
+                        -o-transform: matrix(-1, 0, 0, 1, 0, 0);
+                    }
                 }
             }
         }
@@ -53,8 +80,25 @@ html {
             @include medium-header;
             .header__title {
                 .header__title__child {
-                    top: 35vh;
+                    top: 22vh;
                     left: 10vw;
+                }
+                .header__title-pic {
+                    left: 10vw;
+                    h2 {
+                        bottom: 23vh;
+                    }
+                    br {
+                        display: none;
+                    }
+                    .header-pic {
+                        display: inline-block;
+                        height: 400px;
+                        position: absolute;
+                        bottom: 0;
+                        right: -190px;
+
+                    }
                 }
             }
         } 
@@ -66,8 +110,24 @@ html {
             @include large-header;
             .header__title {
                 .header__title__child {
-                    top: 30vh;
-                    left: 18vw;
+                    top: 18vh;
+                    left: 13vw;
+                }
+                .header__title-pic {
+                    left: 15vw;
+                    h2 {
+                        bottom: 25vh;
+                        br {
+                            display: none;
+                        }
+                    }
+                    .header-pic {
+                        display: inline-block;
+                        height: 440px;
+                        position: absolute;
+                        bottom: 0;
+                        right: -220px;
+                    }
                 }
             }
         }

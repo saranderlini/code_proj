@@ -3,6 +3,7 @@
     position: relative;
     width: 100%;
     outline: none;
+    z-index: 6;
     .home-nav__list {
         display: flex;
         justify-content: space-around;
@@ -19,7 +20,24 @@
                 @include nav-items;
             }
         }
-
+        @media only screen and (min-width: 481px) and (max-width: 769px) {
+            .first {
+                a {
+                    h2 {
+                        color: $light-blue-white;
+                    }
+                }
+            }
+        }
+        @media only screen and (min-width: 770px) and (max-width: 1024px) {
+            .third {
+                a {
+                    h2 {
+                        color: $light-blue-white
+                    }
+                }
+            }
+        }
     }
 }
 @media (hover: hover) {

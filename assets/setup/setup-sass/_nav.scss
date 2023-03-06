@@ -171,7 +171,7 @@ body {
                     top: 29rem;
                     color: $text-white;
                     font-size: 2rem;
-                    a {
+                    a, a:active, a:visited {
                         color: $text-white;
                         @media (hover:hover) {
                             &:hover {

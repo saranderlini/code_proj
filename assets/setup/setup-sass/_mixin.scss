@@ -36,13 +36,14 @@
 
 @mixin header-h1 {
     display: inline;
-    line-height: 6rem;
+    line-height: 5rem;
     font-size: 3.125rem;
     font-size: clamp(3.125rem, 2.1634615384615383rem + 4.807692307692308vw, 9.375rem);
-    letter-spacing: 0.1rem;
+    letter-spacing: 0.08rem;
 }
 
 @mixin header-h2 {
+    display: inline-block;
     margin-top: 0.7rem;
     font-size: 1.875rem;
     font-size: clamp(1.875rem, 1.298076923076923rem + 2.8846153846153846vw, 5.625rem);
