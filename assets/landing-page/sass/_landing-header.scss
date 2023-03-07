@@ -56,20 +56,6 @@ html {
                 }
             }
         }
-        /*@media only screen and (orientation: portrait) {
-            .header__title-h1 {
-                padding: 5rem 2rem 0 0;
-            }
-            .header__title-pic {
-                padding-top: 3rem;
-            }
-        }*/
-        /* Devices max 480px on landscape mode  
-        @media only screen and (orientation: landscape) and (max-width: 896px) {
-            .header__title-h1 {
-                margin: 0;
-            }
-        }*/
     }
     
     /* Devices between 481px and 768px and portrait */
@@ -107,55 +93,7 @@ html {
             }
         }
     }
-    /* Devices between 481px and 768px */
-    /*@media only screen and (min-width: 481px) and (max-width: 769px) and (orientation: portrait) {
-        .header {
-            @include small-header;
-            .header__title {
-                position: relative;
-                .header__title-h1 {
-                    left: 10vw;
-                    top: 17vh;
-                }
-                .header__title-pic {
-                    h2 {
-                        bottom: 20vh;
-                        left: 190px;
-                    }
-                    .header-pic {
-                        display: inline-block;
-                        height: 320px;
-                        position: absolute;
-                        bottom: 0;
-                        left: 16px;
-                        -moz-transform: matrix(-1, 0, 0, 1, 0, 0);
-                        -webkit-transform: matrix(-1, 0, 0, 1, 0, 0);
-                        -o-transform: matrix(-1, 0, 0, 1, 0, 0);
-                    }
-                }
-            }
-        }
-    }
 
-    /*@media only screen and (min-width: 481px) and (max-width: 769px) and (orientation: landscape) {
-        .header {
-            @include small-header;
-            .header__title {
-                position: relative;
-                .header__title-pic {
-                    h2 {
-                        bottom: 20vh;
-                        br {
-                            display: none;
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-    /* Devices between 769px and 1024px */
-    
     /* Devices between 770px and 1024px and portrait */
     @media only screen and (min-width: 770px) and (max-width: 1024px) {
         .header {
@@ -165,7 +103,7 @@ html {
                     @media only screen and (orientation: portrait) {
                         .header__title-h {
                             bottom: 17vh;
-                            height: 63vh;
+                            height: 73vh;
                             h1 {
                                 font-size: 5.9375rem;
                                 font-size: clamp(5.9375rem, 1.2007874015748037rem + 9.842519685039369vw, 7.5rem);
@@ -189,35 +127,6 @@ html {
             }
         }
     }
-    /*@media only screen and (min-width: 770px) and (max-width: 1024px) and (orientation: portrait) {
-        .header {
-            @include medium-header;
-            .header__title {
-                .header__title-h1 {
-                    top: 22vh;
-                    left: 10vw;
-                }
-                .header__title-pic {
-                    left: 10vw;
-                    h2 {
-                        bottom: 23vh;
-                    }
-                    br {
-                        display: none;
-                    }
-                    .header-pic {
-                        display: inline-block;
-                        height: 400px;
-                        position: absolute;
-                        bottom: 0;
-                        right: -190px;
-
-                    }
-                }
-            }
-        } 
-    }
-
     /* marger screens, at least 1025px */
     
     /* Smaller devices (iPhone 5/SE) on landscape modality */
@@ -306,24 +215,36 @@ html {
                         justify-content: space-around;
                         left: 7rem;
                         h1 {
-                            font-size: 4.375rem;
-                            font-size: clamp(4.375rem, -0.4413507109004744rem + 9.47867298578199vw, 5.625rem);
+                            font-size: 4.0625rem;
+                            font-size: clamp(4.0625rem, -1.7780172413793105rem + 11.494252873563218vw, 4.6875rem);
                             line-height: 5.625rem;
                             line-height: clamp(5.625rem, 0.8086492890995256rem + 9.47867298578199vw, 6.875rem);;
                         }
                         h2 {
-                            /*font-size: 3.125rem;
-                            font-size: clamp(3.125rem, -1.6913507109004744rem + 9.47867298578199vw, 4.375rem);*/
-                            font-size: 5rem;
-                            line-height: 6rem;
+                            font-size: 4.6875rem;
+                            font-size: clamp(4.6875rem, 0.15120967741935498rem + 8.064516129032258vw, 5.3125rem);
+                            line-height: 6.5rem;
                         }
                     }
                     .header__title-pic {
                         position: absolute;
                         bottom: -2.1vh;
                         right: 5vw;
+                        
                         .header-pic {
                             height: 55vh;
+                        }
+                    }
+                    @media only screen and (min-width: 900px) and (max-width: 1024px) {
+                        .header__title-h {
+                            left: 2rem;
+                            h1 {
+                                font-size: 4.375rem;
+                                font-size: clamp(4.375rem, -0.4413507109004744rem + 9.47867298578199vw, 5.625rem);    
+                            }
+                            h2 {
+                                padding-left: 2rem;
+                            }
                         }
                     }
                 }
