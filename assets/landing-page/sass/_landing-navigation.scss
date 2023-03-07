@@ -15,26 +15,17 @@
         background-color: transparent;
         backdrop-filter: blur(4px);
         -webkit-backdrop-filter: blur(4px);
-        a {
-            h2 {
-                @include nav-items;
-            }
-        }
-        @media only screen and (min-width: 481px) and (max-width: 769px) {
-            .first {
-                a {
-                    h2 {
-                        color: $light-blue-white;
-                    }
+        li {
+            a {
+                h2 {
+                    @include nav-items;
                 }
             }
         }
-        @media only screen and (min-width: 770px) and (max-width: 1024px) {
-            .third {
-                a {
-                    h2 {
-                        color: $light-blue-white
-                    }
+        .third {
+            a {
+                h2 {
+                    color: $light-blue-white
                 }
             }
         }

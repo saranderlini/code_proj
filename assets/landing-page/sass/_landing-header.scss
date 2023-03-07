@@ -5,52 +5,115 @@ html {
     -o-background-size: cover;
     background-size: cover;
 
-    /* This is the main setup, mobile-first (max 480px)*/
+    /* This is the main setup, mobile-first (max 480px) and portrait */
     .header {
         @include smallest-header;
         height: 100vh;
-        .header__title {
-            color: $header-color;
-            display: inline-block;
-            height: 100vh;
-            padding: 2rem;
+        .header__box {
             position: relative;
-            text-shadow: 0.2rem 0.2rem 1rem rgba(221, 221, 225, 0.679);
+            height: 100vh;
             width: 100vw;
-            
-            .header__title__child {
-                position: absolute;
-                line-height: 4rem;
-                top: 13vh;
-                margin-right: 2rem;
-                h1 {
-                    @include header-h1;
+            .header__title {
+                color: $header-color;
+                text-shadow: 0.2rem 0.2rem 1rem rgba(221, 221, 225, 0.679);
+                position: relative;
+                height: 100vh;
+                width: 100vw;
+                /* only for devices on portrait */
+                @media only screen and (orientation: portrait) {
+                    /* section with text */
+                    .header__title-h {
+                        position: absolute;
+                        bottom: 15vh;
+                        display: flex;
+                        flex-direction: column;
+                        height: 70vh;
+                        justify-content: space-between;
+                        left: 4vw;
+                        h1 {
+                            @include header-h1;
+                        }
+                        h2 {
+                            @include header-h2;
+                            width: 90%;
+                        }
+                        /* only for iPhone SE */
+                        @media only screen and (max-width: 320px)  {
+                            & {
+                                bottom: 20vh;
+                            }
+                        }
+                    }
+                    /* section with picture */
+                    .header__title-pic {
+                        position: absolute;
+                        bottom: -1.1vh;
+                        right: 0;
+                        .header-pic {
+                            height: 45vh;
+                        }
+                    }
                 }
             }
+        }
+        /*@media only screen and (orientation: portrait) {
+            .header__title-h1 {
+                padding: 5rem 2rem 0 0;
+            }
             .header__title-pic {
-                position: absolute;
-                bottom: 0;
-                line-height: 3.5rem;
-
-                h2 {
-                    position: relative;
-                    @include header-h2;
-                    bottom: 30vh;
-                }
-                .header-pic {
-                    display: none;
+                padding-top: 3rem;
+            }
+        }*/
+        /* Devices max 480px on landscape mode  
+        @media only screen and (orientation: landscape) and (max-width: 896px) {
+            .header__title-h1 {
+                margin: 0;
+            }
+        }*/
+    }
+    
+    /* Devices between 481px and 768px and portrait */
+    @media only screen and (min-width: 481px) and (max-width: 769px) {
+        .header {
+            @include small-header;
+            .header__box {
+                .header__title {
+                    @media only screen and (orientation: portrait) {
+                        .header__title-h {
+                            height: 65vh;
+                            bottom: 19vh;
+                            h1 {
+                                font-size: 4.375rem;
+                                font-size: clamp(4.375rem, 3.3311631944444446rem + 3.4722222222222223vw, 5rem);
+                                line-height: 5rem;
+                                line-height: clamp(5rem, 3.9561631944444446rem + 3.4722222222222223vw, 5.625rem);;
+                            }
+                            h2 {
+                                font-size: 4.0625rem;
+                                font-size: clamp(4.0625rem, 3.5405815972222223rem + 1.7361111111111112vw, 4.375rem);
+                                width: 80%;
+                                
+                                line-height: 4.6875rem;
+                                line-height: clamp(4.6875rem, 4.165581597222222rem + 1.7361111111111112vw, 5rem);
+                            }
+                        }
+                        .header__title-pic {
+                            .header-pic {
+                                height: 55vh;
+                            }
+                        }
+                    } 
                 }
             }
         }
     }
-
     /* Devices between 481px and 768px */
-    @media only screen and (min-width: 481px) and (max-width: 769px) {
+    /*@media only screen and (min-width: 481px) and (max-width: 769px) and (orientation: portrait) {
         .header {
             @include small-header;
             .header__title {
                 position: relative;
-                .header__title__child {
+                .header__title-h1 {
                     left: 10vw;
                     top: 17vh;
                 }
@@ -74,12 +137,63 @@ html {
         }
     }
 
+    /*@media only screen and (min-width: 481px) and (max-width: 769px) and (orientation: landscape) {
+        .header {
+            @include small-header;
+            .header__title {
+                position: relative;
+                .header__title-pic {
+                    h2 {
+                        bottom: 20vh;
+                        br {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
     /* Devices between 769px and 1024px */
+    
+    /* Devices between 770px and 1024px and portrait */
     @media only screen and (min-width: 770px) and (max-width: 1024px) {
         .header {
             @include medium-header;
+            .header__box {
+                .header__title {
+                    @media only screen and (orientation: portrait) {
+                        .header__title-h {
+                            bottom: 17vh;
+                            height: 63vh;
+                            h1 {
+                                font-size: 5.9375rem;
+                                font-size: clamp(5.9375rem, 1.2007874015748037rem + 9.842519685039369vw, 7.5rem);
+                                line-height: 7.1875rem;
+                                line-height: clamp(7.1875rem, 2.4507874015748037rem + 9.842519685039369vw, 8.75rem);;
+                            }
+                            h2 {
+                                font-size: 5rem;
+                                font-size: clamp(5rem, 1.2106299212598426rem + 7.874015748031496vw, 6.25rem);
+                                line-height: 6.25rem;
+                                line-height: clamp(6.25rem, 2.4606299212598426rem + 7.874015748031496vw, 7.5rem);
+                            }
+                        }
+                        .header__title-pic {
+                            .header-pic {
+                                height: 51vh;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    /*@media only screen and (min-width: 770px) and (max-width: 1024px) and (orientation: portrait) {
+        .header {
+            @include medium-header;
             .header__title {
-                .header__title__child {
+                .header__title-h1 {
                     top: 22vh;
                     left: 10vw;
                 }
@@ -105,11 +219,164 @@ html {
     }
 
     /* marger screens, at least 1025px */
+    
+    /* Smaller devices (iPhone 5/SE) on landscape modality */
+    @media only screen and (max-width: 568px) and (orientation:landscape) {
+        .header {
+            .header__box {
+                .header__title {
+                    .header__title-h {
+                        bottom: 22vh;
+                        left: 10vw;
+                        position: absolute;
+                        display: flex;
+                        flex-direction: column;
+                        height: 50vh;
+                        justify-content: space-around;
+                        h2 {
+                            padding-left: 5vw;
+                            br {
+                                display: none;
+                            }
+                        }
+                    }
+                    .header__title-pic {
+                        position: absolute;
+                        bottom: -2.1vh;
+                        right: 10vw;
+                        .header-pic {
+                            height: 70vh;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    /* Devices on landscape between 569px and 812px  take up from here, just copied and pasted the previous measures */
+    @media only screen and (min-width: 569px) and (max-width: 812px) and (orientation: landscape) {
+        .header {
+            .header__box {
+                .header__title {
+                    .header__title-h {
+                        bottom: 18vh;
+                        position: absolute;
+                        display: flex;
+                        flex-direction: column;
+                        height: 70vh;
+                        justify-content: space-around;
+                        left: 4rem;
+                        h1 {
+                            font-size: 3.125rem;
+                            font-size: clamp(3.125rem, 0.1980452674897113rem + 8.230452674897121vw, 4.375rem);
+                            line-height: 3.75rem;
+                            line-height: clamp(3.75rem, 0.8230452674897113rem + 8.230452674897121vw, 5rem);
+                        }
+                        h2 {
+                            font-size: 2.1875rem;
+                            font-size: clamp(2.1875rem, -0.7394547325102887rem + 8.230452674897121vw, 3.4375rem);
+                            br {
+                                display: none;
+                            }
+                        }
+                    }
+                    .header__title-pic {
+                        position: absolute;
+                        bottom: -2.1vh;
+                        right: 4vw;
+                        .header-pic {
+                            height: 68vh;
+                        }
+                    }
+                }
+            }
+        }
+    } 
+    /* Devices on landscape, max 1024px */
+    @media only screen and (min-width: 813px) and (max-width: 1024px) and (orientation: landscape) {
+        .header {
+            .header__box {
+                .header__title {
+                    .header__title-h {
+                        bottom: 16vh;
+                        position: absolute;
+                        display: flex;
+                        flex-direction: column;
+                        height: 75vh;
+                        justify-content: space-around;
+                        left: 7rem;
+                        h1 {
+                            font-size: 4.375rem;
+                            font-size: clamp(4.375rem, -0.4413507109004744rem + 9.47867298578199vw, 5.625rem);
+                            line-height: 5.625rem;
+                            line-height: clamp(5.625rem, 0.8086492890995256rem + 9.47867298578199vw, 6.875rem);;
+                        }
+                        h2 {
+                            /*font-size: 3.125rem;
+                            font-size: clamp(3.125rem, -1.6913507109004744rem + 9.47867298578199vw, 4.375rem);*/
+                            font-size: 5rem;
+                            line-height: 6rem;
+                        }
+                    }
+                    .header__title-pic {
+                        position: absolute;
+                        bottom: -2.1vh;
+                        right: 5vw;
+                        .header-pic {
+                            height: 55vh;
+                        }
+                    }
+                }
+            }            
+        }
+    }
+    /* Devices minimum 1025px, no distinciton between portrait or landscape */
     @media only screen and (min-width: 1025px) {
+        .header {
+            .header__box {
+                .header__title {
+                    .header__title-h {
+                        bottom: 20vh;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        height: 70vh;
+                        left: 7vw;
+                        position: absolute;
+                        h1 {
+                            font-size: 5.9375rem;
+                            font-size: clamp(5.9375rem, -0.895833333333333rem + 10.666666666666666vw, 8.4375rem);
+                            line-height: 135px;
+                            width: 80%;
+                        }
+                        h2 {
+                            font-size: 4.6875rem;
+                            font-size: clamp(4.6875rem, 0.41666666666666696rem + 6.666666666666667vw, 6.25rem);
+                            line-height: 125px;
+                            
+                            br {
+                                display: none;
+                            }
+                        }
+                    }
+                    .header__title-pic {
+                        position: absolute;
+                        bottom: -2.1vh;
+                        right: 3vw;
+                        .header-pic {
+                            height: 60vh;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    /*@media only screen and (min-width: 1025px) {
         .header {
             @include large-header;
             .header__title {
-                .header__title__child {
+                .header__title-h1 {
                     top: 18vh;
                     left: 13vw;
                 }
@@ -131,5 +398,5 @@ html {
                 }
             }
         }
-    }
+    }*/
 }
