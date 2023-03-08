@@ -26,21 +26,21 @@ $space-amounts: (1,2,3,4,5);
 @font-face {
     font-family: "aileron";
     src: url(/assets/font/aileron/Aileron-Black.otf) format(otf);
-    font-weight: 900;
+    font-weight: 700;
 }
 
 /* h2 font */ 
 @font-face {
     font-family: "aileron";
     src: url(/assets/font/aileron/Aileron-Heavy.otf) format(otf);
-    font-weight: 700;
+    font-weight: 600;
 }
 
 /* h3-h6 font */
 @font-face {
     font-family: "aileron";
     src: url(/assets/font/aileron/Aileron-Regular.otf) format(otf);
-    font-weight: normal;
+    font-weight: 500;
 }
 
 /* body font */
@@ -66,58 +66,43 @@ $space-amounts: (1,2,3,4,5);
 }
 
 /* font fallback, when aileron doesn't load */
-/* barlow for h3-h6 */
-/*@font-face {
-    font-family: "barlow"; 
-    src: url(../../font/barlow_condensed/BarlowCondensed-Medium.ttf) format(ttf);
-    font-weight: 500;
-}*/
+
+/* barlow for h1 
 @font-face {
-    font-family: "archivo";
-    src: url(../../font/archivo/Archivo-Regular.ttf) format(ttf);
-    font-weight: 500;
-}
-/* barlow for h1 */
-/*@font-face {
-    font-family: "barlow";
-    src: url(../../font/barlow_condensed/BarlowCondensed-Bold.ttf);
-    font-weight: 900;
-}*/
-@font-face {
-    font-family: "archivo";
-    src: url(../../font/archivo/Archivo-Bold.ttf) format(ttf);
-    font-weight: 900;
+    font-family: "Barlow";
+    src: url(../../font/barlow/Barlow-Bold.ttf) format(ttf);
+    font-weight: bolder;
 }
 
-/* barlow for h2 */
-/*@font-face {
-    font-family: "barlow";
-    src: url(../../font/barlow_condensed/BarlowCondensed-Medium.ttf) format(ttf);
-    font-weight: 700;
-}*/
+/* barlow for h2 
 @font-face {
-    font-family: "archivo";
-    src: url(../../font/archivo/Archivo-SemiBold.ttf) format(ttf);
-    font-weight: 700;
+    font-family: "barlow";
+    src: url(../../font/barlow/Barlow-SemiBold.ttf) format(ttf);
+    font-weight: bold;
 }
+
+/* barlow for h3-h6
+@font-face {
+    font-family: "barlow"; 
+    src: url(../../font/barlow/Barlow-Medium.ttf) format(ttf);
+    font-weight: 500;
+}*/
 
 /* Applying fonts to headings and text styles */
 
 h1 {
-    font-family: "aileron", "archivo";
-    font-weight: 900;
+    font-family: "Barlow";
+    font-weight: 600;
 }
 
 h2 {
-    font-family: "aileron", "archivo";
-    font-weight: 700;
+    font-family: "Barlow";
+    font-weight: 500;
 }
 
 h3, h4, h5, h6 {
-    font-family: "aileron", "archivo";
-    font-weight: normal;
+    font-family: "Barlow";
     font-weight: 500;
-
 }
 
 body {
