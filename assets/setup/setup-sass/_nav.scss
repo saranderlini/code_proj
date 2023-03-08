@@ -125,18 +125,16 @@ body {
                 word-wrap: break-word;
                 z-index: 999;
 
-                @media only screen and (orientation: portrait) {
-                    & {
-                        padding: 5rem 2.5rem;                
-                    }
-                }
-
                 @media only screen and (orientation: landscape) {
-                    & {
-                        padding: 1rem 2.5rem;
+                    padding: 1rem 2.5rem;
+                    li {
+                        width: 40%;
+                        margin: auto;
+                    }
+                    @media only screen and (min-height: 760px) {
+                        padding: 6rem 2.5rem;
                         li {
-                            width: 40%;
-                            margin: auto;
+                            margin: 1rem auto;
                         }
                     }
                 }
@@ -194,8 +192,9 @@ body {
                         }
                     }
                     @media only screen and (orientation: landscape) {
-                        & {
-                            top: 20rem;
+                        top: 20rem;
+                        @media only screen and (min-height: 760px) {
+                            top: 90%;
                         }
                     }
                 }
