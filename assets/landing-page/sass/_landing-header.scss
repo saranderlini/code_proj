@@ -216,9 +216,7 @@ html {
                     .header__title-pic {
                         position: absolute;
                         bottom: -2.1vh;
-                        right: 0;
-                        width: 20vw;
-                        overflow: hidden;
+                        right: 0;                        overflow: hidden;
                         .header-pic {
                             height: 68vh;
                         }
@@ -286,6 +284,10 @@ html {
                         position: absolute;
                         bottom: -2.1vh;
                         right: 0;
+                        @media only screen and (min-width: 813px) and (max-width: 896px) {
+                            width: 26vw;
+                        }
+
                         
                         .header-pic {
                             height: 65vh;

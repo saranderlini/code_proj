@@ -124,39 +124,27 @@ body {
                 text-align: center;
                 word-wrap: break-word;
                 z-index: 999;
-
-                @media only screen and (orientation: landscape) {
-                    padding: 1rem 2.5rem;
-                    li {
-                        width: 40%;
-                        margin: auto;
-                    }
-                    @media only screen and (min-height: 760px) {
-                        padding: 6rem 2.5rem;
-                        li {
-                            margin: 1rem auto;
-                        }
-                    }
-                }
+                padding: 3rem 0;
 
                 @media (hover:hover) {
                     font-size: 1.125rem;
                     font-size: clamp(1.125rem, 0.9125rem + 1.0625vw, 2.1875rem);
-                }
-                li {
-                    padding: 0.4rem;
-                }
-                @media (hover:hover) {
+                    }
+                    li {
+                        padding: 0.4rem;
+                    }
                     li:hover {
                         .block__nav__linkname {
                             color: $link-hover;
                         }
                     }
-                }
 
-                .home-btn, .first, .second, .third {
+                    .home-btn, .first, .second, .third {
                     padding: 1.5rem 0;
                     line-height: 2.5rem;
+                    @media only screen and (orientation: landscape) {
+                        padding: 1rem 0;
+                    }
 
                     .nav__linkname, .nav__linkname:active, .nav__linkname:visited {
                         color: $light-blue-white;
@@ -177,13 +165,28 @@ body {
                         }
                     }
                 }
+
+                @media only screen and (orientation: landscape) {
+                    padding: 2rem 2.5rem;
+                    li {
+                        width: 40%;
+                        margin: auto;
+                    }
+                    @media only screen and (min-height: 760px) {
+                        padding: 6rem 2.5rem;
+                        li {
+                            margin: 2rem auto;
+                        }
+                    }
+                }
+
                 .close-btn {
                     position: absolute;
                     right: 1rem;
-                    top: 29rem;
+                    top: 90%;
                     color: $text-white;
                     font-size: 2rem;
-                    a, a:active, a:visited {
+                    a, a:active, a:visited, a:focus {
                         color: $text-white;
                         @media (hover:hover) {
                             &:hover {
@@ -192,7 +195,7 @@ body {
                         }
                     }
                     @media only screen and (orientation: landscape) {
-                        top: 20rem;
+                        top: 50%;
                         @media only screen and (min-height: 760px) {
                             top: 90%;
                         }
