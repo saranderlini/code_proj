@@ -31,6 +31,7 @@
                     summary {
                         cursor: pointer;
                         list-style: none;
+                        outline: none;
                         /*for Safari and Firefox*/ 
                         &::-webkit-details-marker {
                             display: none;
@@ -120,8 +121,9 @@
                                                 color: $text-white;
                                                 bottom: 0.7rem;
                                                 font-size: 13px;
-                                                left: 70%;
-                                                padding: 0.2rem;
+                                                left: 65%;
+                                                padding: 0 0.4rem;
+                                                line-height: 5vh;
                                                 /* inserting the arrow in the bubblespeech */ 
                                                 &::after {
                                                     content: "";
@@ -157,7 +159,7 @@
                     justify-content: space-evenly;
                     .skill__par__card {
                         width: fit-content;
-                        max-width: 40vw;
+                        max-width: 60vw;
                         height: min-content;
                     }
                 }
@@ -178,25 +180,28 @@
                     flex-direction: row;
                     flex-wrap: nowrap;
                     justify-content: space-around;
-                    
                 }
                 .skill__par__card {
                     width: fit-content;
-                    max-width: 40vw;
+                    max-width: 20vw;
                     height: min-content;
+                    h3 {
+                        font-size: 1.5rem;
+                    }
                     &:first-of-type {
                         details[open] {
+                            min-width: 20vw;
+                            max-width: 40vw;
                             ul {
                                 li {
                                     .li-bar {
-                                        width: 20vw;
+                                        width: 100%;
                                     }
                                 }
                             }
                         }
                     }
                 }
-
             }
         }
     }
