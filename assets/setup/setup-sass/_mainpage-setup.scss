@@ -38,7 +38,8 @@ body {
         @media only screen and (min-width: 481px) and (max-width: 1024px) {
             .block__section {
                 .block__section__title {
-                    font-size: 3rem;
+                    font-size: 2.7rem;
+                    font-size: clamp(2.7rem, 2.434254143646409rem + 0.8839779005524857vw, 3rem);
                     margin-left: 4rem;
                     span {
                         font-size: 5vh;
