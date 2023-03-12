@@ -16,7 +16,9 @@ body {
         .nav__left {
             left: 1.5vw;
             position: relative;
-            a {
+            display: flex;
+            align-items: center;
+            /*a {
                 margin-left: 1.5rem;
                 i {
                     size: clamp(0.5rem, 0.35rem + 0.75vw, 1.25rem);
@@ -30,7 +32,17 @@ body {
                         color: $h-aqua;
                     }
                 }
+            }*/
+            .logo {
+                width: 20vw;
+                @media only screen and (min-width: 480px) and (max-width: 768px) {
+                    width: 13vw;
+                }
+                @media only screen and (min-width: 769px)  {
+                    width: 10vw;
+                }
             }
+
         }
         /* UX menu up to 1024px */
         @media only screen and (max-width: 1024px) {

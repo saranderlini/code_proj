@@ -41,19 +41,21 @@ h3, h4, h5, h6 {
 }
 
 body {
-    font-family: "aileron", sans-serif;
+    font-family: "Noto Sans", sans-serif;
+    font-style: normal;
     font-weight: 300;
-    font-style: light;
 }
 
 strong {
-    font-family: "aileron", sans-serif;
-    font-weight: bold;
+    font-family: "Noto Sans", sans-serif;
+    font-style: normal;
+    font-weight: 400;
 }
 
 em {
-    font-family: "aileron", sans-serif;
+    font-family: "NOto Sans", sans-serif;
     font-style: italic;
+    font-weight: 300;
 }
 
 /* Setting up the a link */ 
@@ -80,7 +82,7 @@ hr {
 }
 
 @media only screen and (max-width: 480px) {
-    $base-font-size: 18px;
+    $base-font-size: 17px;
     html {
         background-image: url(../../img/triangle-light-500.svg);
         -webkit-background-size: contain;
@@ -121,7 +123,7 @@ hr {
 }
 
 @media only screen and (min-width: 769px) and (max-width: 1024px) {
-    $base-font-size: 20px;
+    $base-font-size: 19px;
     html {
         background-image: url(../../img/triangle-light-1024.svg);
         -webkit-background-size: cover;
@@ -141,7 +143,7 @@ hr {
 }
 
 @media only screen and (min-width: 1025px) {
-    $base-font-size: 22px;
+    $base-font-size: 21px;
     html {
         background-image: url(../../img/triangle-light-1200.svg);
         -webkit-background-size: cover;
