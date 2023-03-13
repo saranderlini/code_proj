@@ -14,14 +14,14 @@ body {
             .section__title, .section__subtitle {
                 color: $azure-white;
             }
-            .section__par {
-                padding-bottom: 2rem;
-            }
         }
         /* The text section, common to both paragraphs*/
         .section__par {
             line-height: 2rem;
-            padding-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            &:first-of-type {
+                padding-bottom: 2rem;
+            }
         }
     }
 
@@ -91,6 +91,9 @@ body {
             .section-right {
                 padding-right: 12vw;
                 text-align: right;
+                .section__title, .section__subtitle {
+                    margin-left: 17vw;
+                }
                 .section__par {
                     margin-left: 17vw;
                     line-height: 2.3rem;
