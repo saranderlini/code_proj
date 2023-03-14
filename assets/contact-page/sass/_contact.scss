@@ -68,7 +68,11 @@ html {
                     }
                 }
                 @media only screen and (min-width: 1025px) {
+                    .block__section__title {
+                        margin-left: 20%;
+                    }
                     .block__section__par {
+                        width: 60%;
                         .contact--list {
                             display: flex;
                             justify-content: space-between;
@@ -77,6 +81,7 @@ html {
                                 &:first-of-type {
                                     display: flex;
                                     flex-direction: column;
+                                    flex-grow: 2;
                                     justify-content: space-evenly;
                                     align-items: flex-start;
                                     .contact--list--data {
