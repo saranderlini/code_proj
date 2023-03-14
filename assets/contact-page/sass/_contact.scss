@@ -68,7 +68,7 @@ html {
                     }
                 }
                 @media only screen and (min-width: 1025px) {
-                    .block__section__title {
+                    .contact--title {
                         margin-left: 20%;
                     }
                     .block__section__par {
@@ -104,6 +104,9 @@ html {
                                 }
                             }
                         }
+                    }
+                    .contact--par {
+                        width: 60%;
                     }
                 }
             }
