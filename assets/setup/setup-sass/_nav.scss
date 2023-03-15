@@ -187,6 +187,7 @@ body {
                         color: $text-white;
                         font-size: 2rem;
                         a, a:active, a:visited, a:focus {
+                            text-decoration: none;
                             color: $text-white;
                             @media (hover:hover) {
                                 &:hover {
